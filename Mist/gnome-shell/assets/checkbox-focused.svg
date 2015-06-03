@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg3199"
+   height="22"
+   width="24"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="checkbox-focused.svg">
+  <sodipodi:namedview
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0.8"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview13"
+     showgrid="true"
+     inkscape:zoom="10.060201"
+     inkscape:cx="-5.2755036"
+     inkscape:cy="16.271855"
+     inkscape:window-x="1024"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3199">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2990"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs3201">
+    <linearGradient
+       id="linearGradient14219"
+       y2="-388.73"
+       gradientUnits="userSpaceOnUse"
+       y1="-396.35"
+       gradientTransform="matrix(1.5918 0 0 .85714 -256.56 59.685)"
+       x2="-93.031"
+       x1="-93.031">
+      <stop
+         id="stop15406"
+         style="stop-color:#515151"
+         offset="0" />
+      <stop
+         id="stop15408"
+         style="stop-color:#292929"
+         offset="1" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata3204">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:#ffffff;fill-opacity:1;stroke:none"
+     d="M 10,1 C 4.46,1 0,5.46 0,11 c 0,5.54 4.46,10 10,10 5.54,0 10,-4.46 10,-10 0,-1.558125 -0.0037,-1.354863 -0.35,-1.9270833 0,0 -0.495246,-0.4049527 -1,-0.2 C 18.084437,9.1025607 18.016667,9.75625 18.016667,9.75625 18.017474,10.33553 18,9.9982466 18,11 c 0,4.432 -3.568,8 -8,8 -4.432,0 -8,-3.568 -8,-8 0,-4.432 3.568,-8 8,-8 1.340847,0 2.595527,0.3325389 3.696248,0.9167771 1.100721,0.5842382 0.894743,0.8247316 1.605836,1.0603062 0.337157,0.1116952 0.805633,0.087009 1.052083,-0.16875 0.225742,-0.2342697 0.279754,-0.6860495 0.11875,-0.96875 C 15.306893,1.792217 13.237748,1 10,1 z"
+     id="rect3770-7"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="sssssssssssssaas" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none"
+     id="rect2987-3-6-9"
+     width="18"
+     height="2"
+     x="-3.6555679"
+     y="16.142132"
+     rx="1"
+     ry="1"
+     transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none"
+     id="rect3757-5-4-6"
+     width="2"
+     height="8"
+     x="-3.6555679"
+     y="10.142136"
+     rx="1"
+     ry="1"
+     transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)" />
+  <path
+     sodipodi:type="arc"
+     style="fill:#ffffff;fill-opacity:0.2;stroke:none"
+     id="path3912"
+     sodipodi:cx="2.5"
+     sodipodi:cy="6.7555909"
+     sodipodi:rx="5.5"
+     sodipodi:ry="5.2444091"
+     d="m 8,6.7555909 a 5.5,5.2444091 0 1 1 -11,0 5.5,5.2444091 0 1 1 11,0 z"
+     transform="matrix(1.6218888,0,0,1.700933,6.4657844,-0.49080752)" />
+</svg>
