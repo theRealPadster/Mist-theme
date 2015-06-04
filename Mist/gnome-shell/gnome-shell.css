@@ -1508,15 +1508,16 @@ StScrollBar StButton#vhandle:active {
     background-color: rgba(128, 128, 128, 0.1);
 }
 
-.calendar-today {
+.calendar-today,
+.calendar-today:active {
     /*background-image: url("assets/calendar-today.svg");
     text-shadow: black 0px 1px 2px;
     font-weight: bold;*/
 
-    color: rgb(255,255,255);
+    color: #fff;
     text-shadow: #000 0px 2px 2px;
-    font-weight: bold;
-    background-gradient-start: inherit;
+    font-weight: bold; /*TODO - swap this and .calendar-day-base:hover*/
+    background-gradient-start: rgba(255,255,255,0.4);
     background-gradient-end: rgba(255,255,255,0.4);
     background-gradient-direction: vertical;
 }
@@ -1524,6 +1525,7 @@ StScrollBar StButton#vhandle:active {
 .calendar-day-with-events {
     font-weight: bold;
     color: rgba(255,255,255,0.9);
+    /*TODO - make more obvious, theme the dot underneath?*/
 }
 
 .calendar-other-month-day {
@@ -2804,6 +2806,9 @@ list all in one css rule*/
     color: #333;
     background-color: #e6e6e6;
     border-radius: 2em;
+    /* TODO - doesn't seem to work, just goes instantly :/
+    transition-duration: 500ms;
+    */
 }
 
 /*TODO - not working...
