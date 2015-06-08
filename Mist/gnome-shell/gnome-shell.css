@@ -986,6 +986,7 @@ StScrollBar StButton#vhandle:active {
     padding: 4px 32px;
     /*TODO - added this to remove stupid overline from 3.16*/
     box-shadow: none;
+    border-radius: 18px;
 }
 
 .app-view-control:focus {
@@ -2548,10 +2549,11 @@ StScrollBar StButton#vhandle:active {
     height: 48px;
 }
 
-/*TODO - added in code merge, used somewhere?*/
+/*TODO - added in code merge, doesn't seem to be used...
 .framed-user-icon:hover {
     border: 1px solid #eee;
 }
+*/
 
 /* Screen shield */
 /* Removed, since user-themes don't exactly work on login, lock, etc. */
