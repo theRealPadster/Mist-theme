@@ -442,7 +442,7 @@ StScrollBar StButton#vhandle:active {
 */
 
 /* Entries */
-/*NOTE - just theming StEntry results in a crashing chat message popup?*/
+/*NOTE - just theming StEntry here results in a crashing chat message popup?*/
 .search-entry,
 .login-dialog StEntry,
 .notification StEntry,
@@ -1928,7 +1928,9 @@ and some underline, or something since it's hard to see the colour difference)
 .chat-sent {
     padding-left: 18pt;
     color: #959595;
+    /*TODO - not working, make another distinction
     text-align: right;
+    */
 }
 .chat-sent:rtl {
     padding-left: 0px;
@@ -2855,11 +2857,9 @@ list all in one css rule*/
 
 /*todo - fix calendar (text sizes, day buttons funky bottom padding, etc.*/
 /*TODO - fix spacing in app-menu*/
-/*TODO - chat-notification, scrollbar, etc*/
 /*TODO - legacy* stuff*/
 
 /*
 changed:
--removed thumbnail-scroll styling as it's not present in GNOME 3.16
--fixed styling of entry, scrollbar, and chat-icon for chat notifications
+
 */
