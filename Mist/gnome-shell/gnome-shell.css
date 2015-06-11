@@ -1178,7 +1178,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 /*active app*/ /*TODO - this doesn't theme pressed apps, just the all-apps thing?*/
-.app-well-app:checked > .overview-icon,
+.app-well-app:checked > .overview-icon,foo
 .app-well-app:active > .overview-icon,
 .show-apps:checked > .overview-icon,
 .show-apps:active > .overview-icon {
@@ -1194,6 +1194,17 @@ StScrollBar StButton#vhandle:active {
     box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 1);
     background-color: rgba(255,255,255,0.05);
     transition-duration: 100ms;
+}
+
+
+/*TODO - none of these seem to theme anything other than the all-apps thing?!
+oh, they do search results, too, just not apps
+find what's theming them and make sure they're all the same*/
+.app-well-app:checked:hover > .overview-icon,
+.app-well-app:active:hover > .overview-icon,
+.show-apps:checked:hover > .overview-icon,
+.show-apps:active:hover > .overview-icon {
+    background-color: rgba(255,255,255,0.1);
 }
 
 .show-apps:checked .show-apps-icon,
