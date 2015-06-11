@@ -138,11 +138,19 @@ StScrollBar StButton#vhandle:active {
     -slider-handle-radius: 0px;
 }
 
+/*NOTE - all system-menu icons, to theme the volume slider icon*/
+.popup-menu-boxpointer StIcon {
+    color: #e6e6e6;
+}
+
 /* PopupMenu */
 
+
+/*NOTE - checkmark etc in popup-menu*/
 .popup-menu-ornament {
     text-align: right;
     width: 1em;
+    padding-left: 0.4em;
 }
 
 .popup-menu-boxpointer,
@@ -228,13 +236,16 @@ StScrollBar StButton#vhandle:active {
 .popup-image-menu-item {
 }
 
+/*TODo - this has huge padding that won't go away*/
 .popup-separator-menu-item {
-    -gradient-height: 1px;
-    -gradient-start: rgba(255,255,255,0.0);
-    -gradient-end: rgba(255,255,255,0.3);
-    -margin-horizontal: 24px;
     height: 1px;
-    padding: 8px 0px;
+    /*NOTe - popup-menu separator, how far in from the sides*/
+    /*TODO - tweak size, colour, fix padding?*/
+    margin: 6px 64px;
+    background-color: transparent;
+    border-color: #333;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
 .popup-alternating-menu-item:alternate {
@@ -431,7 +442,8 @@ StScrollBar StButton#vhandle:active {
 */
 
 /* Entries */
-
+/*TODO - just theming StEntry results in a crashing chat message popup?*/
+/*TODO - if these all work from StEntry with no issues, delete redundant ones*/
 .search-entry,
 .login-dialog StEntry,
 .notification StEntry,
@@ -615,7 +627,7 @@ StScrollBar StButton#vhandle:active {
     color: rgba(0,0,0,0.3);
 }
 
-/*TODO - remove blue underlines on panel clicked buttons - added because 3.16??*/
+/*remove blue underlines on panel clicked buttons - added because 3.16??*/
 #panel .panel-button:active,
 #panel .panel-button:overview,
 #panel .panel-button:focus,
@@ -983,8 +995,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 .app-view-control {
+    transition-duration: 100ms;
     padding: 4px 32px;
-    /*TODO - added this to remove stupid overline from 3.16*/
+    /*added this to remove stupid overline from 3.16*/
     box-shadow: none;
     border-radius: 18px;
 }
@@ -1111,7 +1124,7 @@ StScrollBar StButton#vhandle:active {
     height: 0.4em;
     width: 1em;
     border-radius: 0.2em;
-    margin-bottom: 2px;
+    margin: 5px 0px 1px 0px;
     /*TODO - tweak - from slider style
         was 0.3 em and 0.15em, etc.
     
@@ -1122,6 +1135,11 @@ StScrollBar StButton#vhandle:active {
     background-color: transparent;
     background-image: url("thing.svg");
     */
+}
+
+/*TODO - move running-app dot down hack*/
+.overview-icon:last-child {
+    margin-bottom: 3px;
 }
 
 .app-well-app.app-folder > .overview-icon {
@@ -1159,7 +1177,7 @@ StScrollBar StButton#vhandle:active {
     color: white;
 }
 
-/*active app*/
+/*active app*/ /*TODO - this doesn't theme pressed apps, just the all-apps thing?*/
 .app-well-app:checked > .overview-icon,
 .app-well-app:active > .overview-icon,
 .show-apps:checked > .overview-icon,
@@ -1167,8 +1185,14 @@ StScrollBar StButton#vhandle:active {
     /*background-gradient-start: rgba(255, 255, 255, .05);
     background-gradient-end: rgba(255, 255, 255, .15);
     background-gradient-direction: vertical;*/
+    /*
+    TODO - set background colour on all-apps:pressed to same as apps:pressed
+    - get shadow to be the same, too
+    - not sure where the theming is coming from, as this doesn't do it
+    */
     border-radius: 4px;
     box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(255,255,255,0.05);
     transition-duration: 100ms;
 }
 
@@ -1435,7 +1459,6 @@ StScrollBar StButton#vhandle:active {
     background-image: url("assets/calendar-arrow-left.svg");
 }
 
-/* TODO - for some reason the first time you click the clock, it's black, but works after that */
 .datemenu-date-label {
     padding: .2em 1.7em;
     font-weight: bold;
@@ -1527,7 +1550,7 @@ StScrollBar StButton#vhandle:active {
 
     color: #fff;
     text-shadow: #000 0px 2px 2px;
-    font-weight: bold; /*TODO - swap this and .calendar-day-base:hover*/
+    font-weight: bold; /*TODO - swap this and .calendar-day-base:hover?*/
     background-gradient-start: rgba(255,255,255,0.4);
     background-gradient-end: rgba(255,255,255,0.4);
     background-gradient-direction: vertical;
@@ -1612,7 +1635,7 @@ StScrollBar StButton#vhandle:active {
 .world-clocks-button,
 .world-clocks-button:focus {
     background-color: transparent;
-    border-radius: 5em; /*TODO - just big*/
+    border-radius: 5em; /*TODO - just big enough to make it 50% rounded*/
 }
 /*TODO - for some reason the text isn't controlled by the above rule*/
 /*it's in a thing in another thing (2 layers deep)*/
@@ -1851,18 +1874,25 @@ StScrollBar StButton#vhandle:active {
     color: #ccc;
 }
 
+.chat-body {
+    spacing: 5px;
+}
+
+.chat-response {
+    margin: 5px;
+}
+
 .chat-log-message {
     color: #888;
 }
 
-.chat-group-sent, .chat-group-meta {
-    padding: 8px 0;
+.chat-new-group {
+    padding-top: 1em;
 }
 
 .chat-received {
     padding-left: 4px;
 }
-
 .chat-received:rtl {
     padding-left: 0px;
     padding-right: 4px;
@@ -1872,7 +1902,6 @@ StScrollBar StButton#vhandle:active {
     padding-left: 18pt;
     color: #959595;
 }
-
 .chat-sent:rtl {
     padding-left: 0px;
     padding-right: 18pt;
@@ -1887,10 +1916,6 @@ StScrollBar StButton#vhandle:active {
 .chat-meta-message:rtl {
     padding-left: 0px;
     padding-right: 4px;
-}
-
-.chat-notification-scrollview{
-	max-height: 22em;
 }
 
 .subscription-message {
@@ -2845,3 +2870,14 @@ list all in one css rule*/
 
 /*todo - fix calendar (text sizes, day buttons funky bottom padding, etc.*/
 /*TODO - fix spacing in app-menu*/
+/*TODO - chat-notification entry, scrollbar, etc*/
+/*TODO - legacy* stuff*/
+
+/*
+changed:
+-removed some todos that should be notes
+-added 100ms transition-duration to app-view-controls
+-moved app-running dot down a bit so underneath steam+spotify icons
+-fixed colour on the volume icon by the slider
+-initial fixing of pressed show-apps button pressed colour
+*/
