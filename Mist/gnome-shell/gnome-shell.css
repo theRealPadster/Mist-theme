@@ -1178,7 +1178,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 /*active app*/ /*TODO - this doesn't theme pressed apps, just the all-apps thing?*/
-.app-well-app:checked > .overview-icon,foo
+.app-well-app:checked > .overview-icon,
 .app-well-app:active > .overview-icon,
 .show-apps:checked > .overview-icon,
 .show-apps:active > .overview-icon {
