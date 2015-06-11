@@ -55,16 +55,16 @@ stage {
 
 /* Scroll Bars */
 
-StScrollBar {
-    padding: 0px;
-}
-
 StScrollView.vfade {
     -st-vfade-offset: 68px;
 }
 
 StScrollView.hfade {
     -st-hfade-offset: 68px;
+}
+
+StScrollBar {
+    padding: 0px;
 }
 
 StScrollView StScrollBar {
@@ -79,16 +79,16 @@ StScrollBar StBin#trough {
 
 StScrollBar StButton#vhandle {
     background-color: #d9d9d9;
-    /*background-color: #5d6464;
-    border: 2px solid #242424;*/
     border-radius: 8px;
     border: none;
+    margin: 1px;
 }
 
 StScrollBar StButton#hhandle {
     background-color: #d9d9d9;
     border-radius: 8px;
     border: none;
+    margin: 1px;
 }
 
 StScrollBar StButton#hhandle:hover,
@@ -442,8 +442,7 @@ StScrollBar StButton#vhandle:active {
 */
 
 /* Entries */
-/*TODO - just theming StEntry results in a crashing chat message popup?*/
-/*TODO - if these all work from StEntry with no issues, delete redundant ones*/
+/*NOTE - just theming StEntry results in a crashing chat message popup?*/
 .search-entry,
 .login-dialog StEntry,
 .notification StEntry,
@@ -464,6 +463,16 @@ StScrollBar StButton#vhandle:active {
 
     box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+}
+
+/*NOTE - styling StEntry for chat notifications*/
+StEntry {
+    box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    border: none;
+    background-gradient-start: rgba(0,0,0,0);
+    background-gradient-end: rgba(0,0,0,0);
+    background-gradient-direction: vertical;
 }
 
 .search-entry {
@@ -1485,7 +1494,7 @@ find what's theming them and make sure they're all the same*/
 
 /*NOTE - the date*/
 .datemenu-today-button .date-label {
-    font-size: 1.2em; /*TODO - tweak, bold?*/
+    font-size: 1.2em;
 }
 
 .datemenu-today-button:hover {
@@ -1893,6 +1902,7 @@ find what's theming them and make sure they're all the same*/
     margin: 5px;
 }
 
+/*TODO - make this styled like insensitive text?*/
 .chat-log-message {
     color: #888;
 }
@@ -1900,6 +1910,12 @@ find what's theming them and make sure they're all the same*/
 .chat-new-group {
     padding-top: 1em;
 }
+
+/*
+TODO - Gjs_ChatLineBox themes the individual chat lines, but need to style the 
+receiving and sending differently (e.g. sent is #d9d9d9, receiving is #e6e6e6,
+and some underline, or something since it's hard to see the colour difference)
+*/
 
 .chat-received {
     padding-left: 4px;
@@ -1912,6 +1928,7 @@ find what's theming them and make sure they're all the same*/
 .chat-sent {
     padding-left: 18pt;
     color: #959595;
+    text-align: right;
 }
 .chat-sent:rtl {
     padding-left: 0px;
@@ -2027,27 +2044,6 @@ find what's theming them and make sure they're all the same*/
 
 .switcher-list-item-container {
     spacing: 8px;
-}
-
-/* TODO - these don't seem to theme what I thought they did... */
-.thumbnail-scroll-gradient-left {
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(51, 51, 51, 1.0);
-    background-gradient-end: rgba(51, 51, 51, 0);
-    border-radius: 24px;
-    border-radius-topright: 0px;
-    border-radius-bottomright: 0px;
-    width: 60px;
-}
-
-.thumbnail-scroll-gradient-right {
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(51, 51, 51, 0);
-    background-gradient-end: rgba(51, 51, 51, 1.0);
-    border-radius: 24px;
-    border-radius-topleft: 0px;
-    border-radius-bottomleft: 0px;
-    width: 60px;
 }
 
 .switcher-list .item-box {
@@ -2782,28 +2778,30 @@ TODO:
 .message-list-section-title-box {
 }
 
-/*close icon in side-pane*/
-/*todo - tweak*/
-/*.message-list-section-close > StIcon*/
-.message-list-sections StIcon{
+/*NOTE - close all messages icon*/
+.message-list-sections StIcon {
     color: rgb(192,192,192);
     background-color: transparent;
+    border-radius: 2em;
 }
+
+/*NOTE - close all messages icon:hover*/
 .message-list-section-close:hover > StIcon,
 .message-list-section-close:focus > StIcon {
     color: #333;
     background-color: #e6e6e6;
 }
-
-/*todo - for some reason if i port to above it doesn't work
-try to consolidate all into one less-hungry css rule?*/
-.message-list-sections StIcon {
-    color: rgb(192,192,192);
-    background-color: transparent;
-}
-.message-list-sections StIcon:hover {
+/*close icon in side-pane, notifications*/
+.message-content StIcon{
     color: #333;
     background-color: #e6e6e6;
+    border-radius: 2em;
+}
+
+/*clears spot underneath chat icon in notification*/
+.message-secondary-bin  StIcon {
+    color: transparent;
+    background-color: transparent;
 }
 
 /*note - the actual popup notification*/
@@ -2838,34 +2836,10 @@ list all in one css rule*/
 /*note - e.g. timestamp in side-pane?*/
 .message-secondary-bin {
 }
-/*?*/
-.message-secondary-bin > StIcon {
-    color: red;
-    background-color: red;
-}
 
 /*main thing for side-pain notification, top part of USB message*/
 .message-content {
 }
-
-/*TODO - redundant, since it already looks like this (non-hover)*/
-/*TODO - made it always :hover-style, like Ciliora-Tertia*/
-.message-content StIcon {
-    color: #333;
-    background-color: #e6e6e6;
-    border-radius: 2em;
-    /* TODO - doesn't seem to work, just goes instantly :/
-    transition-duration: 500ms;
-    */
-}
-
-/*TODO - not working...
-.message-content:hover StIcon,
-.message-content:focus StIcon {
-    color: #333;
-    background-color: #e6e6e6;
-}
-*/
 
 /*panel button for currently-running app*/
 .panel-status-menu-box {
@@ -2881,14 +2855,11 @@ list all in one css rule*/
 
 /*todo - fix calendar (text sizes, day buttons funky bottom padding, etc.*/
 /*TODO - fix spacing in app-menu*/
-/*TODO - chat-notification entry, scrollbar, etc*/
+/*TODO - chat-notification, scrollbar, etc*/
 /*TODO - legacy* stuff*/
 
 /*
 changed:
--removed some todos that should be notes
--added 100ms transition-duration to app-view-controls
--moved app-running dot down a bit so underneath steam+spotify icons
--fixed colour on the volume icon by the slider
--initial fixing of pressed show-apps button pressed colour
+-removed thumbnail-scroll styling as it's not present in GNOME 3.16
+-fixed styling of entry, scrollbar, and chat-icon for chat notifications
 */
