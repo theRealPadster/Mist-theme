@@ -473,6 +473,7 @@ StEntry {
     background-gradient-start: rgba(0,0,0,0);
     background-gradient-end: rgba(0,0,0,0);
     background-gradient-direction: vertical;
+    selection-background-color: #d9d9d9;
 }
 
 .search-entry {
@@ -636,13 +637,15 @@ StEntry {
     color: rgba(0,0,0,0.3);
 }
 
-/*remove blue underlines on panel clicked buttons - added because 3.16??*/
+/*added because 3.16??*/
 #panel .panel-button:active,
 #panel .panel-button:overview,
 #panel .panel-button:focus,
 #panel .panel-button:checked {
     /*box-shadow: inset 0 -2px 0px #256ab1;*/
+    /*remove blue underlines and slight dark tint on panel clicked buttons*/
     box-shadow: none;
+    background-color: transparent;
 }
 
 .panel-button #appMenu {
@@ -2878,7 +2881,17 @@ list all in one css rule*/
 }
 .message-icon-bin:rtl {
 }
+
+/*NOTE - icon in chat notifications?
+TODO - won't crop images, but works for transparent with background colour*/
 .message-icon-bin > StIcon {
+    border-radius: 50em;
+    border: none;
+    background-size: contain;
+    
+    /*width: 48px;
+    height: 48px;
+    border-radius: 24px;*/
 }
 /*note - e.g. timestamp in side-pane?*/
 .message-secondary-bin {
@@ -2900,11 +2913,13 @@ list all in one css rule*/
     icon-shadow: 0px 1px 4px black;
 }
 
-/*todo - fix calendar (text sizes, day buttons funky bottom padding, etc.*/
+/*TODO - fix calendar (text sizes, day buttons funky bottom padding, etc.*/
 /*TODO - fix spacing in app-menu*/
 /*TODO - legacy* stuff*/
+/*TODO - round avatars in chat notifications*/
 
 /*
 changed:
--themed legacy-tray
+-fixed highlighted text background colour
+-removed big shadow square when panel buttons clicked
 */
