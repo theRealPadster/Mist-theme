@@ -1898,20 +1898,23 @@ find what's theming them and make sure they're all the same*/
 }
 
 .chat-body {
-    spacing: 5px;
+    spacing: 0px;
 }
 
+/*the StEntry in the text box for the notification (to reply)*/
 .chat-response {
     margin: 5px;
+    selection-background-color: #d9d9d9;
+    selected-color: black;
 }
 
-/*TODO - make this styled like insensitive text?*/
+/* if not timestampe, what is this?*/
 .chat-log-message {
-    color: #888;
+    color: #666;
 }
 
 .chat-new-group {
-    padding-top: 1em;
+    padding-top: 0.6em;
 }
 
 /*
@@ -1920,18 +1923,33 @@ receiving and sending differently (e.g. sent is #d9d9d9, receiving is #e6e6e6,
 and some underline, or something since it's hard to see the colour difference)
 */
 
+/*the actual text area, only as big as the letters inside*/
 .chat-received {
     padding-left: 4px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-left-width: 1px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    
+    /*NOTE - for some reason the borders don't show up without a gradient*/
+    background-gradient-start: rgba(255,255,255,0);
+    background-gradient-end: transparent;
+    background-gradient-direction: horizontal;
 }
 .chat-received:rtl {
     padding-left: 0px;
     padding-right: 4px;
+    
+    border-left-width: 0px;
+    border-right-width: 1px;
 }
 
 .chat-sent {
     padding-left: 18pt;
-    color: #959595;
-    /*TODO - not working, make another distinction
+    color: #959595; /*TODO - convert to theme's standard #d9d9d9? not as clear then*/
+    /* not working, so added left grouping lines
     text-align: right;
     */
 }
@@ -1940,15 +1958,14 @@ and some underline, or something since it's hard to see the colour difference)
     padding-right: 18pt;
 }
 
+/*NOTE - e.g chat timestamps*/
 .chat-meta-message {
-    padding-left: 4px;
+    padding: 0px 4px;
     font-size: 9pt;
-    color: #bbb;
+    color: #666;
 }
 
 .chat-meta-message:rtl {
-    padding-left: 0px;
-    padding-right: 4px;
 }
 
 .subscription-message {
@@ -2920,6 +2937,6 @@ TODO - won't crop images, but works for transparent with background colour*/
 
 /*
 changed:
--fixed highlighted text background colour
--removed big shadow square when panel buttons clicked
+-added grouping lines to left of incoming chat messages
+-fixed chat notification reply entry selected text colours
 */
