@@ -236,10 +236,10 @@ StScrollBar StButton#vhandle:active {
 .popup-image-menu-item {
 }
 
-/*TODo - this has huge padding that won't go away*/
+/*TODO - this has huge padding that won't go away*/
 .popup-separator-menu-item {
     height: 1px;
-    /*NOTe - popup-menu separator, how far in from the sides*/
+    /*NOTE - popup-menu separator, how far in from the sides*/
     /*TODO - tweak size, colour, fix padding?*/
     margin: 6px 64px;
     background-color: transparent;
@@ -347,6 +347,7 @@ StScrollBar StButton#vhandle:active {
     background-gradient-direction: vertical;
     background-gradient-start: transparent;
     background-gradient-end: transparent;
+
     /*border: 1px solid #8b8b8b;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255, 255, 255, 0.2);
@@ -509,7 +510,7 @@ StEntry {
 
 .search-entry:focus {
     font-weight: bold;
-    
+
     /*NOTE - added so it's a decent size when in use, centred when not*/
     width: 19em;
 }
@@ -617,7 +618,7 @@ StEntry {
 /* used for the app menu header only */
 .label-shadow {
     color: rgba(0,0,0,0.3);
-    
+
     /*text-shadow: black 0px 1px 4px;*/
     /*NOTE - sometimes shows extra shadow, sometimes just this*/
 }
@@ -932,11 +933,18 @@ StEntry {
     text-align: center;
     -x-offset: 8px;
 
-    text-shadow: black 0px 1px 2px; /*TODO - not always working?*/
+    /*TODO - can't see too well over windows...
+    ...use modal-diag style?*/
+
+    text-shadow: black 0px 1px 2px;
+
+    /*border-radius: 8px;
+    background-color: rgba(0,0,0,0.8);
+    border-width: 1px;
+    border-color: rgba(255,255,255,0.15);*/
 }
 
 /* Search Box */
-
 
 /*NOTE - relocated to Entries section above*/
 
@@ -1115,7 +1123,7 @@ StEntry {
     padding: 15px;
 }
 
-/* NOTE - running app - TODO - this is removed and we only get a stupid dot now??
+/* NOTE - running app - this is removed and we only get a stupid dot now??
     it's so much harder to see...
 .app-well-app.running > .overview-icon {
     text-shadow: black 0px 1px 2px;
@@ -1139,8 +1147,8 @@ StEntry {
     margin: 5px 0px 1px 0px;
     /*TODO - tweak - from slider style
         was 0.3 em and 0.15em, etc.
-    
-    TODO - not working :/
+
+    ...not working :/
     width: 48px;
     height: 48px;
     margin-bottom: 0px;
@@ -1149,7 +1157,7 @@ StEntry {
     */
 }
 
-/*TODO - move running-app dot down hack*/
+/*move running-app dot down hack*/
 .overview-icon:last-child {
     margin-bottom: 3px;
 }
@@ -1513,7 +1521,7 @@ find what's theming them and make sure they're all the same*/
     text-align: center;
     width: 2.4em;
     height: 2.4em;
-    
+
 }
 
 .calendar-day-base:hover,
@@ -1573,7 +1581,7 @@ find what's theming them and make sure they're all the same*/
 
     color: #fff;
     text-shadow: #000 0px 2px 2px;
-    font-weight: bold; /*TODO - swap this and .calendar-day-base:hover?*/
+    font-weight: bold;
     background-gradient-start: rgba(255,255,255,0.4);
     background-gradient-end: rgba(255,255,255,0.4);
     background-gradient-direction: vertical;
@@ -1658,11 +1666,11 @@ find what's theming them and make sure they're all the same*/
 .world-clocks-button,
 .world-clocks-button:focus {
     background-color: transparent;
-    border-radius: 5em; /*TODO - just big enough to make it 50% rounded*/
+    border-radius: 5em; /*just needs to be big enough for 50% rounding*/
 }
-/*TODO - for some reason the text isn't controlled by the above rule*/
-/*it's in a thing in another thing (2 layers deep)*/
-/*TODO - can I make just the innermost one do things, so it's not huge?*/
+/*TODO - for some reason the text isn't controlled by the above rule
+it's in a thing in another thing (2 layers deep)
+can I make just the innermost one do things, so it's not huge?*/
 .world-clocks-button > * > * {
     color: #d9d9d9;
     padding: 0px 10px 1px 10px;
@@ -1690,7 +1698,6 @@ find what's theming them and make sure they're all the same*/
 #message-tray {
     background: #111;
     border-top: 1px solid rgba(255,255,255,0.15);
-
     height: 72px;
 }
 
@@ -1917,12 +1924,6 @@ find what's theming them and make sure they're all the same*/
     padding-top: 0.6em;
 }
 
-/*
-TODO - Gjs_ChatLineBox themes the individual chat lines, but need to style the 
-receiving and sending differently (e.g. sent is #d9d9d9, receiving is #e6e6e6,
-and some underline, or something since it's hard to see the colour difference)
-*/
-
 /*the actual text area, only as big as the letters inside*/
 .chat-received {
     padding-left: 4px;
@@ -1932,7 +1933,7 @@ and some underline, or something since it's hard to see the colour difference)
     border-right-width: 0px;
     border-top-width: 0px;
     border-bottom-width: 0px;
-    
+
     /*NOTE - for some reason the borders don't show up without a gradient*/
     background-gradient-start: rgba(255,255,255,0);
     background-gradient-end: transparent;
@@ -1941,15 +1942,16 @@ and some underline, or something since it's hard to see the colour difference)
 .chat-received:rtl {
     padding-left: 0px;
     padding-right: 4px;
-    
+
     border-left-width: 0px;
     border-right-width: 1px;
 }
 
 .chat-sent {
     padding-left: 18pt;
-    color: #959595; /*TODO - convert to theme's standard #d9d9d9? not as clear then*/
-    /* not working, so added left grouping lines
+    color: #959595;
+    /*TODO - convert to theme's standard #d9d9d9? not as clear then
+    ...not working, so added left grouping lines
     text-align: right;
     */
 }
@@ -2022,7 +2024,7 @@ and some underline, or something since it's hard to see the colour difference)
     width: 2em;
     -shell-counter-overlap-x: 13px;
     -shell-counter-overlap-y: 10px;
-    
+
     /*********/
     background-color: #e6e6e6;
     box-shadow: 4px solid rgba(0,0,0,0.6);
@@ -2280,7 +2282,7 @@ and some underline, or something since it's hard to see the colour difference)
 }
 
 .end-session-dialog-shutdown-icon {
-    color: #dfdfdf; /*TODo - tweak colours, size (was 32px)*/
+    color: #dfdfdf;
     width: 48px;
     height: 48px;
 }
@@ -2489,7 +2491,7 @@ and some underline, or something since it's hard to see the colour difference)
 /* On-screen Keyboard */
 
 #keyboard {
-    background: rgba(0,0,0,0.85); /*TODO - 0.8 is standard, want 0.85 or 0.9 for visibility?*/
+    background: rgba(0,0,0,0.85); /*NOTE - 0.8 is standard, want 0.85 or 0.9 for visibility?*/
 }
 
 .keyboard-layout {
@@ -2603,12 +2605,6 @@ and some underline, or something since it's hard to see the colour difference)
     height: 48px;
 }
 
-/*TODO - added in code merge, doesn't seem to be used...
-.framed-user-icon:hover {
-    border: 1px solid #eee;
-}
-*/
-
 /* Screen shield */
 /* Removed, since user-themes don't exactly work on login, lock, etc. */
 
@@ -2640,14 +2636,6 @@ and some underline, or something since it's hard to see the colour difference)
 .popup-menu-arrow {
     icon-shadow: rgba(0,0,0,0.6) 0px 0.5px 4px; /*TODOish - for some reason shadow is darker than the rest, this seems okay*/
 }
-
-/*
-TODO:
--app-icon-shadow-things: running, hover have text-shadow, not focus?;
--final tweaks for checkbox designs (focused is hover state, 0.2, so none for normal?)
--try inverted keyboard style (transparent, dark keys)
--stupid calendar separator line gradient thingy hack
-*/
 
 /* Tile previews */
 .tile-preview {
@@ -2737,7 +2725,7 @@ TODO:
     color:  #e6e6e6;
 }
 
-/*todo - ??*/
+/*TODO - ??*/
 .notification-button {
     background-color: red;
     color: red;
@@ -2813,12 +2801,12 @@ TODO:
     background-gradient-end: transparent;
 }
 
-.button:hover { /*todo - this looks wrong, 0.1?*/
+.button:hover {
+    /*TODO - finish/tweak these (.button)
+    ...this looks wrong, 0.1?*/
     background-gradient-start: rgba(255,255,255,0.2);
     background-gradient-end: rgba(255,255,255,0.2);
 }
-
-/*todo - finish/tweak these (.button)*/
 
 /*note - .message-x seems to theme the popup notifications?*/
 
@@ -2871,8 +2859,8 @@ TODO:
     background-color: transparent;
 }
 
-/*note - the actual popup notification*/
-.message { /*todo - tweak fade effect?*/
+/*NOTE - the actual popup notification*/
+.message {
     background-color: rgba(0,0,0,0.6);
     transition-duration: 200ms;
 }
@@ -2890,7 +2878,7 @@ otherwise it layers on top*/
     background-color: rgba(255,255,255,0.1);
 }
 
-/*todo - theme close buttons in individual notifications,
+/*TODO - theme close buttons in individual notifications,
 list all in one css rule*/
 
 /*?*/
@@ -2905,7 +2893,7 @@ TODO - won't crop images, but works for transparent with background colour*/
     border-radius: 50em;
     border: none;
     background-size: contain;
-    
+
     /*width: 48px;
     height: 48px;
     border-radius: 24px;*/
@@ -2920,7 +2908,6 @@ TODO - won't crop images, but works for transparent with background colour*/
 
 /*panel button for currently-running app*/
 .panel-status-menu-box {
-    /*TODO - get this working for the icon*/
     icon-shadow: 0px 1px 4px black;
     text-shadow: 0px 1px 4px black;
 }
@@ -2930,13 +2917,24 @@ TODO - won't crop images, but works for transparent with background colour*/
     icon-shadow: 0px 1px 4px black;
 }
 
-/*TODO - fix calendar (text sizes, day buttons funky bottom padding, etc.*/
-/*TODO - fix spacing in app-menu*/
-/*TODO - legacy* stuff*/
-/*TODO - round avatars in chat notifications*/
+.notification-button {
+    border-radius: 5em !important; /*just needs to be big enough for 50% rounding*/
+}
+
+/*
+TODO:
+-!!!can test popup-buttons when adding things to the dash.
+-app-icon-shadow-things: running, hover have text-shadow, not focus?
+-final tweaks for checkbox designs (focused is hover state, 0.2, so none for normal?)
+-try inverted keyboard style (transparent, dark keys)
+-stupid calendar separator line gradient thingy hack
+-fix calendar (text sizes, day buttons funky bottom padding, etc.
+-fix huge padding/spacing in app-menu
+-round avatars in chat notifications
+-legacy* stuff
+*/
 
 /*
 changed:
--added grouping lines to left of incoming chat messages
--fixed chat notification reply entry selected text colours
+-fixed radius on notification buttons
 */
