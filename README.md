@@ -1,7 +1,7 @@
 # Mist
 Mist GNOME-Shell theme
 
-![Preview](http://pre07.deviantart.net/2457/th/pre/f/2015/035/c/8/mist_by_therealpadster-d8gorck.png)
+![Preview](http://orig05.deviantart.net/c1be/f/2015/257/4/f/mist_by_therealpadster-d8gorck.png)
 
 ##Current work:
-* Porting to GNOME-Shell 3.16
+* Finished porting to GNOME-Shell 3.16, waiting for GNOME-Shell 3.18 release
