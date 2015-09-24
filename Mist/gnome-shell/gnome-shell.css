@@ -37,8 +37,7 @@ stage {
 }
 
 /* small */
-.app-well-menu,
-.run-dialog-error-label {
+.app-well-menu {
     font-size: 9pt;
 }
 
@@ -2932,6 +2931,10 @@ TODO:
 -fix huge padding/spacing in app-menu
 -round avatars in chat notifications
 -legacy* stuff
+
+-for GNOME 3.18:
+-spinner not working
+-modal-dialog-buttons, new :default state
 */
 
 /*
