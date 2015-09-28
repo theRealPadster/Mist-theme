@@ -340,12 +340,17 @@ StScrollBar StButton#vhandle:active {
 .notification-icon-button,
 .hotplug-notification-item,
 .hotplug-resident-eject-button,
+/*TODO - 3.18 - this changed to .modal-dialog-linked-button? and changed others below*/
 .modal-dialog-button,
+.modal-dialog-linked-button,
 .app-view-control {
     border: 1px solid transparent;
     background-gradient-direction: vertical;
     background-gradient-start: transparent;
     background-gradient-end: transparent;
+
+    box-shadow: none;
+    text-shadow: none;
 
     /*border: 1px solid #8b8b8b;
     background-gradient-direction: vertical;
@@ -353,7 +358,8 @@ StScrollBar StButton#vhandle:active {
     background-gradient-end: rgba(255, 255, 255, 0);*/
 }
 
-.modal-dialog-button {
+.modal-dialog-button,
+.modal-dialog-linked-button {
     font-weight: bold;
 }
 
@@ -362,7 +368,8 @@ StScrollBar StButton#vhandle:active {
 .notification-icon-button:hover,
 .hotplug-notification-item:hover,
 .hotplug-resident-eject-button:hover,
-.modal-dialog-button:hover {
+.modal-dialog-button:hover,
+.modal-dialog-linked-button:hover {
     background-gradient-start: rgba(255,255,255,0.2);
     background-gradient-end: rgba(255,255,255,0.2);
 /*
@@ -375,6 +382,7 @@ StScrollBar StButton#vhandle:active {
 .notification-icon-button:focus,
 .hotplug-notification-item:focus,
 .modal-dialog-button:focus,
+.modal-dialog-linked-button,
 .app-view-control:focus {
     border-width: 1px;
 }
@@ -392,6 +400,8 @@ StScrollBar StButton#vhandle:active {
 .hotplug-resident-eject-button:active,
 .modal-dialog-button:active,
 .modal-dialog-button:pressed,
+.modal-dialog-linked-button:active,
+.modal-dialog-linked-button:pressed,
 .app-view-control:checked {
     background-gradient-start: rgba(255,255,255,0.1);
     background-gradient-end: rgba(255,255,255,0.1);
@@ -408,7 +418,8 @@ StScrollBar StButton#vhandle:active {
 .candidate-page-button:insensitive,
 .notification-button:insensitive,
 .notification-icon-button:insensitive,
-.modal-dialog-button:insensitive {
+.modal-dialog-button:insensitive,
+.modal-dialog-linked-button:insensitive {
     /*color: #b3b3b3;
     color: #c0c0c0;
     color: rgba(255,255,255,0.4);*/
@@ -421,6 +432,7 @@ StScrollBar StButton#vhandle:active {
 
 .search-entry,
 .modal-dialog-button,
+.modal-dialog-linked-button,
 .notification-button,
 .hotplug-notification-item,
 .app-view-controls,
@@ -610,7 +622,7 @@ StEntry {
 }
 
 #appMenu {
-    spinner-image: url("assets/process-working.svg");
+    spinner-image:  url("resource:///org/gnome/shell/theme/process-working.svg");
     spacing: 4px;
 }
 
@@ -2192,18 +2204,30 @@ can I make just the innermost one do things, so it's not huge?*/
     padding-left: 42px;
     padding-bottom: 30px;
     padding-top: 30px;
+
+    /*TODO - 3.18 - match radius to buttons*/
+    border-radius: 18px;
+    padding: 0px;
+}
+
+/*box that houses main content (not buttons, etc)*/
+.modal-dialog-content-box {
 }
 
 .modal-dialog-button-box {
     spacing: 21px;
     padding-top: 20px;
 }
-
-.modal-dialog-button {
+/*TODO - 3.18 - here, too*/
+.modal-dialog-button,
+.modal-dialog-linked-button {
     color: #d9d9d9;
     padding: 4px 18px 5px;
+    /*TODO - 3.18 - tweaking for bigger buttons*/
+    padding: 1em;
 }
 
+.modal-dialog-linked-button:focus,
 .modal-dialog-button:focus {
     color: #fff;
     background-gradient-start: rgba(255,255,255,0.05);
@@ -2212,10 +2236,22 @@ can I make just the innermost one do things, so it's not huge?*/
     /*padding: 3px 17px 4px;*/
 }
 
+.modal-dialog-linked-button:focus:hover,
 .modal-dialog-button:focus:hover {
     background-gradient-start: rgba(255,255,255,0.1);
     background-gradient-end: rgba(255,255,255,0.1);
 }
+
+/*TODO - 3.18 - radii for different button setups
+need to reset default to zero since middle ones curve now*/
+.modal-dialog-linked-button:first-child {
+  border-radius: 0px 0px 0px 18px; }
+.modal-dialog-linked-button:last-child {
+  border-right-width: 0px;
+  border-radius: 0px 0px 18px 0px; }
+.modal-dialog-linked-button:first-child:last-child {
+  border-right-width: 0px;
+  border-radius: 0px 0px 18px 18px; }
 
 /* Run Dialog */
 
@@ -2837,6 +2873,12 @@ can I make just the innermost one do things, so it's not huge?*/
     color: rgb(192,192,192);
     background-color: transparent;
     border-radius: 2em;
+
+    /*
+    seems to be supported now, but looks really
+    weird when the colours invert
+    transition-duration: 100ms;
+    */
 }
 
 /*NOTE - close all messages icon:hover*/
@@ -2933,11 +2975,13 @@ TODO:
 -legacy* stuff
 
 -for GNOME 3.18:
--spinner not working
 -modal-dialog-buttons, new :default state
+-modal thing check make sure it works on connect to local server in nautilus
 */
 
 /*
 changed:
 -fixed radius on notification buttons
+-started implementation of the new linked modal buttons
+-now using default spinner image resource (fixed spinner)
 */
