@@ -2244,6 +2244,8 @@ can I make just the innermost one do things, so it's not huge?*/
 
 /*TODO - 3.18 - radii for different button setups
 need to reset default to zero since middle ones curve now*/
+.modal-dialog-linked-button {
+  border-radius: 0px 0px 0px 0px; }
 .modal-dialog-linked-button:first-child {
   border-radius: 0px 0px 0px 18px; }
 .modal-dialog-linked-button:last-child {
@@ -2981,7 +2983,5 @@ TODO:
 
 /*
 changed:
--fixed radius on notification buttons
--started implementation of the new linked modal buttons
--now using default spinner image resource (fixed spinner)
+
 */
