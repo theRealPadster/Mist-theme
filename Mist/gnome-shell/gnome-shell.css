@@ -2551,6 +2551,7 @@ need to reset default to zero since middle ones curve now*/
     border-radius: 10px;
     border: none;
     color: #e6e6e6;
+    box-shadow: none;
 }
 
 .keyboard-key:grayed {
@@ -2662,16 +2663,16 @@ need to reset default to zero since middle ones curve now*/
     box-shadow: none;
 }
 
-.panel-button,
+#panel .panel-button,
 #panel.unlock-screen .panel-button,
-.system-status-icon,
+.system-status-icon, /*TODO - not working anymore???*/
 .popup-menu-arrow { /*perma-shadow for readability*/
     icon-shadow: black 0px 1px 4px;
     text-shadow: black 0px 1px 4px;
 }
 
 .popup-menu-arrow {
-    icon-shadow: rgba(0,0,0,0.6) 0px 0.5px 4px; /*TODOish - for some reason shadow is darker than the rest, this seems okay*/
+    icon-shadow: rgba(0,0,0,0.6) 0px 0.5px 4px; /*TODO ish - for some reason shadow is darker than the rest, this seems okay*/
 }
 
 /* Tile previews */
@@ -2975,6 +2976,10 @@ TODO:
 -fix huge padding/spacing in app-menu
 -round avatars in chat notifications
 -legacy* stuff
+
+TODO - check arc-dark shell theme for the messed up stuff:
+-shadows missing from top panel
+-pressed icon in dash is black now??
 
 -for GNOME 3.18:
 -modal-dialog-buttons, new :default state
