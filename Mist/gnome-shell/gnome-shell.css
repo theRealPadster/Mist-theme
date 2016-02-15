@@ -2965,28 +2965,31 @@ TODO - won't crop images, but works for transparent with background colour*/
     border-radius: 5em !important; /*just needs to be big enough for 50% rounding*/
 }
 
-/*NOTE - Added for supporting the multi-monitors-add-on by spin83 */
+/*NOTE - Added for supporting the multi-monitors-add-on by spin83
+-It doesn't seem to override the stylesheet. If anyone knows a way to do this,
+please contact me or send a pull request
 
 .workspace-thumbnails-left,
 .workspace-thumbnails-left-314 {
     spacing: 11px;
-    visible-width: 32px; /* Amount visible before hovering */
-    border: 1px solid transparent; /*rgba(128, 128, 128, 0.4)*/
+    visible-width: 32px;
+    border: 1px solid transparent;
     border-left: 0px;
     border-radius: 0px 9px 9px 0px;
-    background-color: transparent; /*rgba(0, 0, 0, 0.5)*/
+    background-color: transparent;
     padding: 11px 11px 11px 7px;
 }
 
 .workspace-thumbnails-left:rtl,
 .workspace-thumbnails-left-314:rtl {
     spacing: 11px;
-    visible-width: 32px; /* Amount visible before hovering */
+    visible-width: 32px;
     border-right: 1px;
     border-left: 0px;
     border-radius: 9px 0px 0px 9px;
     padding: 11px 7px 11px 11px;
 }
+*/
 
 /*
 TODO:
