@@ -2965,6 +2965,29 @@ TODO - won't crop images, but works for transparent with background colour*/
     border-radius: 5em !important; /*just needs to be big enough for 50% rounding*/
 }
 
+/*NOTE - Added for supporting the multi-monitors-add-on by spin83 */
+
+.workspace-thumbnails-left,
+.workspace-thumbnails-left-314 {
+    spacing: 11px;
+    visible-width: 32px; /* Amount visible before hovering */
+    border: 1px solid transparent; /*rgba(128, 128, 128, 0.4)*/
+    border-left: 0px;
+    border-radius: 0px 9px 9px 0px;
+    background-color: transparent; /*rgba(0, 0, 0, 0.5)*/
+    padding: 11px 11px 11px 7px;
+}
+
+.workspace-thumbnails-left:rtl,
+.workspace-thumbnails-left-314:rtl {
+    spacing: 11px;
+    visible-width: 32px; /* Amount visible before hovering */
+    border-right: 1px;
+    border-left: 0px;
+    border-radius: 9px 0px 0px 9px;
+    padding: 11px 7px 11px 11px;
+}
+
 /*
 TODO:
 -!!!can test popup-buttons when adding things to the dash.
@@ -2984,9 +3007,4 @@ TODO - check arc-dark shell theme for the messed up stuff:
 -for GNOME 3.18:
 -modal-dialog-buttons, new :default state
 -modal thing check make sure it works on connect to local server in nautilus
-*/
-
-/*
-changed:
-
 */
