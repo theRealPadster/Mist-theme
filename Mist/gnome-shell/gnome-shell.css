@@ -3011,3 +3011,8 @@ TODO - check arc-dark shell theme for the messed up stuff:
 -modal-dialog-buttons, new :default state
 -modal thing check make sure it works on connect to local server in nautilus
 */
+
+/*media icons by calendar*/
+.message-list-section:first-child .message .message-media-control:hover StIcon {
+  color: #fff;
+}
