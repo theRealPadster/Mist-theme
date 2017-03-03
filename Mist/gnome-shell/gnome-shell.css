@@ -1541,7 +1541,8 @@ find what's theming them and make sure they're all the same*/
     background-color: rgba(255,255,255,0.3);
 }
 
-.calendar-day-base:active {
+.calendar-day-base:active,
+.calendar-day-base:selected {
     font-size: 9pt;
     /*background-color: #555;*/
     background-color: rgba(255,255,255,0.2);
@@ -1593,9 +1594,7 @@ find what's theming them and make sure they're all the same*/
     color: #fff;
     text-shadow: #000 0px 2px 2px;
     font-weight: bold;
-    background-gradient-start: rgba(255,255,255,0.4);
-    background-gradient-end: rgba(255,255,255,0.4);
-    background-gradient-direction: vertical;
+    background-color: rgba(255,255,255,0.4);
 }
 
 .calendar-day-with-events {
