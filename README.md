@@ -16,7 +16,7 @@ Inspired by the look of the GDM3 login manager, the goal is to have a theme that
 * A few other wallpapers I found online with no names or authors
 
 **Music in preview**
-* [Jonathan Coulton's Greatest Hit Plus 13 Other Songs](http://www.deviantart.com/users/outgoing?http://www.jonathancoulton.com/wiki/Jonathan_Coulton%27s_Greatest_Hit_%28Plus_13_Other_Songs%29)
-* [Cash Cash - Take Me Home (feat. Bebe Rexha)](http://www.deviantart.com/users/outgoing?https://play.google.com/store/music/album/Cash_Cash_Take_Me_Home_feat_Bebe_Rexha?id=Beavzz7imldy2cocg4cbraoeuku&hl=en)
+* [Jonathan Coulton's Greatest Hit Plus 13 Other Songs](http://www.jonathancoulton.com/wiki/Jonathan_Coulton%27s_Greatest_Hit_%28Plus_13_Other_Songs%29)
+* [Cash Cash - Take Me Home (feat. Bebe Rexha)](https://play.google.com/store/music/album/Cash_Cash_Take_Me_Home_feat_Bebe_Rexha?id=Beavzz7imldy2cocg4cbraoeuku&hl=en)
 
-Available for Arch Linux [on the AUR](http://www.deviantart.com/users/outgoing?https://aur.archlinux.org/packages/gnome-shell-theme-mist-git/)
+Available for Arch Linux [on the AUR](https://aur.archlinux.org/packages/gnome-shell-theme-mist-git/)
