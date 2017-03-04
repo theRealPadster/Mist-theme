@@ -351,11 +351,6 @@ StScrollBar StButton#vhandle:active {
 
     box-shadow: none;
     text-shadow: none;
-
-    /*border: 1px solid #8b8b8b;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255, 255, 255, 0.2);
-    background-gradient-end: rgba(255, 255, 255, 0);*/
 }
 
 .modal-dialog-button,
@@ -372,10 +367,6 @@ StScrollBar StButton#vhandle:active {
 .modal-dialog-linked-button:hover {
     background-gradient-start: rgba(255,255,255,0.2);
     background-gradient-end: rgba(255,255,255,0.2);
-/*
-    background-gradient-start: rgba(255, 255, 255, 0.3);
-    background-gradient-end: rgba(255, 255, 255, 0.1);
-*/
 }
 
 .notification-button:focus,
@@ -420,9 +411,6 @@ StScrollBar StButton#vhandle:active {
 .notification-icon-button:insensitive,
 .modal-dialog-button:insensitive,
 .modal-dialog-linked-button:insensitive {
-    /*color: #b3b3b3;
-    color: #c0c0c0;
-    color: rgba(255,255,255,0.4);*/
     color: #666;
     background-gradient-direction: none;
     background-color: transparent;
@@ -567,11 +555,6 @@ StEntry {
 
 #panel { /*looks best with no background*/
     background-color: transparent;
-    /*background-image: url(panel-grad.svg);
-    background-repeat: repeat;*/
-    /*background-gradient-start: rgba(0,0,0,205);
-    background-gradient-end: rgba(0,0,0,0);
-    background-gradient-direction: vertical;*/
     font-weight: bold;
     height: 1.86em;
 }
@@ -1213,9 +1196,6 @@ StEntry {
 .app-well-app:active > .overview-icon,
 .show-apps:checked > .overview-icon,
 .show-apps:active > .overview-icon {
-    /*background-gradient-start: rgba(255, 255, 255, .05);
-    background-gradient-end: rgba(255, 255, 255, .15);
-    background-gradient-direction: vertical;*/
     /*
     TODO - set background colour on all-apps:pressed to same as apps:pressed
     - get shadow to be the same, too
