@@ -5,10 +5,10 @@ Inspired by the look of the GDM3 login manager, the goal is to have a theme that
 
 ![Preview](http://orig00.deviantart.net/a21a/f/2016/113/4/e/mist_by_therealpadster-d8gorck.png)
 
-##Current work:
+## Current work:
 * Just chillin'
 
-###Credits
+### Credits
 **Wallpapers used in preview:**
 * [.S.2](http://fav.me/d6ufyli) by [bo0xVn](http://bo0xvn.deviantart.com/)
 * [.68.II](http://fav.me/d5n7wmy) by [bo0xVn](http://bo0xvn.deviantart.com/)
