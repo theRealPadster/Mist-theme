@@ -1481,11 +1481,23 @@ find what's theming them and make sure they're all the same*/
     background-image: url("assets/calendar-arrow-left.svg");
 }
 
+/*NOTE - the date/events/calendar thing on the top left when you click a different day*/
+.events-section-title {
+    color: #d9d9d9;
+    background-color: transparent;
+    border-radius: 5em;
+    padding: 8px 16px;
+}
+.events-section-title:hover, .events-section-title:focus {
+    color: #fff;
+    background-color: rgba(255,255,255,0.2);
+}
+
 .datemenu-date-label {
     padding: .2em 1.7em;
     font-weight: bold;
     text-align: center;
-    color: #e6e6e6; /*was #eeeeec*/
+    color: #e6e6e6;
 }
 
 .datemenu-date-label:hover { /* doesn't seem to be used */
@@ -1512,7 +1524,6 @@ find what's theming them and make sure they're all the same*/
     text-align: center;
     width: 2.4em;
     height: 2.4em;
-
 }
 
 .calendar-day-base:hover,
@@ -1653,19 +1664,34 @@ find what's theming them and make sure they're all the same*/
     padding-right: 8pt;
 }
 
+.world-clocks-header,
+.weather-header,
+.events-section-title {
+    color: #d9d9d9;
+    font-weight: bold;
+}
+
+.weather-button,
+.weather-button:focus { /*bacon*/
+    background-color: transparent;
+    border-radius: 4px; /*just needs to be big enough for 50% rounding*/
+    padding: 8px;
+    margin-left: 8px;
+    color: #d9d9d9;
+}
+
 .world-clocks-button,
 .world-clocks-button:focus {
     background-color: transparent;
     border-radius: 5em; /*just needs to be big enough for 50% rounding*/
+    padding: 8px 16px;
+    color: #d9d9d9;
 }
 /*TODO - for some reason the text isn't controlled by the above rule
 it's in a thing in another thing (2 layers deep)
 can I make just the innermost one do things, so it's not huge?*/
-.world-clocks-button > * > * {
-    color: #d9d9d9;
-    padding: 0px 10px 1px 10px;
-}
 
+.weather-button:hover,
 .world-clocks-button:hover {
     background-color: rgba(255,255,255,0.2);
 }
@@ -1673,15 +1699,30 @@ can I make just the innermost one do things, so it's not huge?*/
     color: #fff;
 }
 
+.weather-button:active,
 .world-clocks-button:active {
     background-color: rgba(255,255,255,0.1);
 }
+.weather-button:active * > *,
 .world-clocks-button:active * > * {
     color: #e6e6e6;
 }
 
 .url-highlighter {
     link-color: #ccf;
+}
+
+/* Weather button */
+.weather-button {
+    color: #d9d9d9;
+}
+
+.weather-button:hover {
+    color: #fff;
+}
+
+.weather-button:active {
+    color: #e6e6e6;
 }
 
 /* Message Tray */
@@ -2833,6 +2874,18 @@ need to reset default to zero since middle ones curve now*/
 /*notification calendar side-pane*/
 .message-list {
 }
+
+.message-list-clear-button.button {
+    border-radius: 5em;
+    padding: 8px 32px;
+}
+
+.message-list-clear-button.button:hover, .message-list-clear-button.button:focus {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.2);
+    background-gradient-end: rgba(255,255,255,0.2);
+}
+
 /*?*/
 .message-list-sections {
 }
