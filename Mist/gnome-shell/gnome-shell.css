@@ -364,7 +364,14 @@ StScrollBar StButton#vhandle:active {
 .hotplug-notification-item:hover,
 .hotplug-resident-eject-button:hover,
 .modal-dialog-button:hover,
-.modal-dialog-linked-button:hover {
+.modal-dialog-linked-button:hover,
+.candidate-page-button:focus:hover,
+.notification-button:focus:hover,
+.notification-icon-button:focus:hover,
+.hotplug-notification-item:focus:hover,
+.hotplug-resident-eject-button:focus:hover,
+.modal-dialog-button:focus:hover,
+.modal-dialog-linked-button:focus:hover {
     background-gradient-start: rgba(255,255,255,0.2);
     background-gradient-end: rgba(255,255,255,0.2);
 }
@@ -2252,14 +2259,6 @@ can I make just the innermost one do things, so it's not huge?*/
     color: #fff;
     background-gradient-start: rgba(255,255,255,0.05);
     background-gradient-end: rgba(255,255,255,0.05);
-
-    /*padding: 3px 17px 4px;*/
-}
-
-.modal-dialog-linked-button:focus:hover,
-.modal-dialog-button:focus:hover {
-    background-gradient-start: rgba(255,255,255,0.1);
-    background-gradient-end: rgba(255,255,255,0.1);
 }
 
 /*TODO - 3.18 - radii for different button setups
