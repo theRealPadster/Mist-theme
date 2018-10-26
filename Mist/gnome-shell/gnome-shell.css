@@ -135,7 +135,15 @@ StScrollBar StButton#vhandle:active {
     -slider-active-border-color: transparent;
     -slider-border-width: 0px;
     -slider-handle-radius: 0px;
-}
+	-barlevel-height: 0.3em; 
+	-barlevel-background-color: rgba(190,190,190,0.4); 
+	-barlevel-border-color: transparent; 
+	-barlevel-active-background-color: white; 
+	-barlevel-active-border-color: transparent; 
+	-barlevel-overdrive-color: #FF5252; 
+	-barlevel-overdrive-border-color: transparent; 
+	-barlevel-overdrive-separator-width: 0.3em; 
+	-barlevel-border-width: 0; }
 
 /*NOTE - all system-menu icons, to theme the volume slider icon*/
 .popup-menu-boxpointer StIcon {
