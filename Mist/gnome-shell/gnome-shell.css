@@ -1690,8 +1690,7 @@ find what's theming them and make sure they're all the same*/
 .weather-button:focus { /*bacon*/
     background-color: transparent;
     border-radius: 4px; /*just needs to be big enough for 50% rounding*/
-    padding: 8px;
-    margin-left: 8px;
+    padding: 8px 16px;
     color: #d9d9d9;
 }
 
