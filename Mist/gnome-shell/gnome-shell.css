@@ -831,15 +831,42 @@ StEntry {
     /*border: 2px solid rgba(255, 255, 255, 0);*/
 }
 
+/* TODO: notificiation-close not used in 3.32? */
+/* TODO: Do I want to use the built-in one or not? */
 .window-close, .notification-close {
-    background-image: url("assets/close-window.svg");
+    /* background-image: url("assets/close-window.svg");
     background-size: 32px;
+    height: 36px;
+    width: 36px;
+
+
+    background-color: rgba(0, 0, 0, 0.8);
+    background-color: transparent;
+    border-radius: 36px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border: none;
+    box-shadow: none;
+    color: white;
+    color: transparent; */
+
+
     height: 32px;
     width: 32px;
+
+    background-color: rgba(255,255, 255, 0.5); /* TODO: transparency? */
+    
+    border-radius: 32px;
+    border: none;
+    box-shadow: none;
+    color: rgba(0,0, 0, 0.8);
 }
 
 .window-close {
     -shell-close-overlap: 16px;
+}
+
+.window-close:hover, .notification-close:hover {
+    background-color: rgba(255,255,255,0.1);
 }
 
 .window-clone-border {
@@ -1045,20 +1072,25 @@ StEntry {
 .page-indicator {
     padding: 15px 30px;
 }
-
 .page-indicator .page-indicator-icon {
     width: 18px;
     height: 18px;
-    background-image: url(assets/page-indicator-inactive.svg);
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 18px;
 }
-
 .page-indicator:hover .page-indicator-icon {
-    background-image: url(assets/page-indicator-hover.svg);
+    border-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.5);
 }
-
-
-.page-indicator:checked .page-indicator-icon {
-    background-image: url(assets/page-indicator-active.svg);
+.page-indicator:active .page-indicator-icon {
+    border: none;
+    margin: 2px;
+    background-color: white;
+}
+.page-indicator:checked .page-indicator-icon,
+.page-indicator:checked:active .page-indicator-icon {
+    background-color: white;
 }
 
 .no-frequent-applications-label {
