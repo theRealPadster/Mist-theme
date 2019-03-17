@@ -2152,12 +2152,20 @@ can I make just the innermost one do things, so it's not huge?*/
 .ripple-box {
     width: 52px;
     height: 52px;
-    background-image: url("assets/corner-ripple-ltr.png");
-    background-size: contain;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: none;
+
+    border-radius: 0 0 52px 0;
+    border: 2px solid #fff;
+    /* TODO: Shorthand is not supported? */
+    /* border-width: 0 20px 20px 0; */ 
+    border-left-width: 0;
+    border-top-width: 0;
 }
 
 .ripple-box:rtl {
-    background-image: url("assets/corner-ripple-rtl.png");
+    border-left-width: 2px;
+    border-right-width: 0;
 }
 
 .switcher-arrow {
