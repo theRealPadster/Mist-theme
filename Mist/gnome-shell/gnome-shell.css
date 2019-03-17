@@ -1456,76 +1456,38 @@ find what's theming them and make sure they're all the same*/
     font-weight: bold;
     padding-bottom: 6px;
     padding-top: 6px;
-    /*
-    color: #888a85;
-    font-size: 9.5pt;
-    font-weight: bold;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    */
 }
 
 .calendar-month-label:focus {
-    /*background-color: #999;*/
     background-color: transparent;
 }
 
-.calendar-change-month-back {
-    width: 18px;
-    height: 12px;
-    background-image: url("assets/calendar-arrow-left.svg");
-    border-radius: 4px;
-    background-color: transparent;
+.calendar-change-month-back StIcon, .calendar-change-month-forward StIcon {
+    icon-size: 1em;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-.calendar-change-month-back:rtl {
-    background-image: url("assets/calendar-arrow-right.svg");
+.calendar-change-month-back, .calendar-change-month-forward {
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 1.8em;
+    font-size: 120%;
 }
 
 .calendar-change-month-back:hover,
-.calendar-change-month-back:focus {
-    background-image: url("assets/calendar-arrow-left-light.svg");
-    background-color: transparent;
-}
-.calendar-change-month-back:active {
-    background-image: url("assets/calendar-arrow-left.svg");
-}
-
-.calendar-change-month-back:hover:rtl,
-.calendar-change-month-back:focus:rtl {
-    background-image: url("assets/calendar-arrow-right-light.svg");
-}
-.calendar-change-month-back:active:rtl {
-    background-image: url("assets/calendar-arrow-right.svg");
-}
-
-.calendar-change-month-forward {
-    width: 18px;
-    height: 12px;
-    background-image: url("assets/calendar-arrow-right.svg");
-    border-radius: 4px;
-    background-color: transparent;
-}
-
-.calendar-change-month-forward:rtl {
-    background-image: url("assets/calendar-arrow-left.svg");
-}
-
+.calendar-change-month-back:focus,
 .calendar-change-month-forward:hover,
 .calendar-change-month-forward:focus {
-    background-image: url("assets/calendar-arrow-right-light.svg");
-    background-color: transparent;
-}
-.calendar-change-month-forward:active {
-    background-image: url("assets/calendar-arrow-right.svg");
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.calendar-change-month-forward:hover:rtl,
-.calendar-change-month-forward:focus:rtl {
-    background-image: url("assets/calendar-arrow-left-light.svg");
+.calendar-change-month-back:hover StIcon,
+.calendar-change-month-forward:hover StIcon {
+    color: #fff;
 }
-.calendar-change-month-forward:active:rtl {
-    background-image: url("assets/calendar-arrow-left.svg");
+.calendar-change-month-back:active,
+.calendar-change-month-forward:active {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*NOTE - the date/events/calendar thing on the top left when you click a different day*/
