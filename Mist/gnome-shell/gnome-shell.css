@@ -832,41 +832,27 @@ StEntry {
 }
 
 /* TODO: notificiation-close not used in 3.32? */
-/* TODO: Do I want to use the built-in one or not? */
 .window-close, .notification-close {
-    /* background-image: url("assets/close-window.svg");
-    background-size: 32px;
-    height: 36px;
-    width: 36px;
+    height: 42px;
+    width: 42px;
+    border-radius: 42px;
 
-
-    background-color: rgba(0, 0, 0, 0.8);
-    background-color: transparent;
-    border-radius: 36px;
-    border: 1px solid rgba(255,255,255,0.15);
     border: none;
     box-shadow: none;
-    color: white;
-    color: transparent; */
-
-
-    height: 32px;
-    width: 32px;
-
-    background-color: rgba(255,255, 255, 0.5); /* TODO: transparency? */
+    color: #fff;
     
-    border-radius: 32px;
-    border: none;
-    box-shadow: none;
-    color: rgba(0,0, 0, 0.8);
-}
-
-.window-close {
-    -shell-close-overlap: 16px;
+    /* NOTE: Using a radial gradient instead of text-shadow cause text-shadow doesn't work */
+    background-gradient-start: rgba(0,0,0,0.6);
+    background-gradient-end: transparent;
+    background-gradient-direction: radial;
 }
 
 .window-close:hover, .notification-close:hover {
-    background-color: rgba(255,255,255,0.1);
+    background-gradient-start: rgba(0,0,0,0.8);
+}
+
+.window-close {
+    -shell-close-overlap: 20px;
 }
 
 .window-clone-border {
