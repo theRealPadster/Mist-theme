@@ -2581,12 +2581,11 @@ need to reset default to zero since middle ones curve now*/
 
 .keyboard-key.shift-key-uppercase {
     background-image: url("assets/key-shift-white.svg");
-    background-color: rgba(255,255,255,0.2);
-}
+    background-color: rgba(255,255,255,0.2); }
+    
 .keyboard-key.shift-key-uppercase:latched {
     background-image: url("assets/key-shift-white-latched.svg");
-    background-color: rgba(255,255,255,0.2);
-}
+    background-color: rgba(255,255,255,0.2); }
 
 .keyboard-key.hide-key {
     background-image: url("assets/key-hide.svg"); }
