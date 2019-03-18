@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0alpha (0783403c25, 2019-02-18, custom)"
+   sodipodi:docname="key-shift-fff.svg"
+   height="32"
+   id="svg7384"
+   version="1.1"
+   viewBox="0 0 32 32"
+   width="32">
+  <sodipodi:namedview
+     inkscape:pagecheckerboard="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="svg7384"
+     inkscape:window-maximized="1"
+     inkscape:window-y="131"
+     inkscape:window-x="0"
+     inkscape:cy="16.122782"
+     inkscape:cx="7.9725005"
+     inkscape:zoom="20.85965"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="false"
+     id="namedview4569"
+     inkscape:window-height="1044"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <metadata
+     id="metadata90">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title
+     id="title9167">Gnome Symbolic Icon Theme</title>
+  <defs
+     id="defs7386">
+    <linearGradient
+       gradientTransform="matrix(-2.7365795,0.28202934,-0.18908311,-0.99988321,239.54008,-879.45557)"
+       id="linearGradient19282"
+       osb:paint="solid">
+      <stop
+         id="stop19284"
+         offset="0"
+         style="stop-color:#666666;stop-opacity:1;" />
+    </linearGradient>
+  </defs>
+  <g
+     id="g852">
+    <g
+       transform="translate(-143.8754,-788)"
+       style="display:inline"
+       id="layer9" />
+    <g
+       transform="translate(-143.8754,-788)"
+       style="display:inline"
+       id="layer10" />
+    <g
+       transform="translate(-143.8754,-788)"
+       id="layer11" />
+    <g
+       transform="translate(-143.8754,-788)"
+       style="display:inline"
+       id="layer13" />
+    <g
+       transform="translate(-143.8754,-788)"
+       id="layer14" />
+    <g
+       transform="translate(-143.8754,-788)"
+       style="display:inline"
+       id="layer15" />
+    <g
+       transform="translate(-143.8754,-788)"
+       style="display:inline"
+       id="g71291" />
+    <g
+       transform="translate(-143.8754,-788)"
+       style="display:inline"
+       id="g4953" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4;marker:none;enable-background:new;stop-opacity:1"
+       d="m 11.9996,25.7813 v -8 H 5.75 L 16,6.2187 26.25,17.7813 h -6.375 v 8 z"
+       id="path16548" />
+  </g>
+</svg>
