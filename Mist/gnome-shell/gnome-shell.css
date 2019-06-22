@@ -135,14 +135,14 @@ StScrollBar StButton#vhandle:active {
     -slider-active-border-color: transparent;
     -slider-border-width: 0px;
     -slider-handle-radius: 0px;
-	-barlevel-height: 0.3em; 
-	-barlevel-background-color: rgba(190,190,190,0.4); 
-	-barlevel-border-color: transparent; 
-	-barlevel-active-background-color: white; 
-	-barlevel-active-border-color: transparent; 
-	-barlevel-overdrive-color: #FF5252; 
-	-barlevel-overdrive-border-color: transparent; 
-	-barlevel-overdrive-separator-width: 0.3em; 
+	-barlevel-height: 0.3em;
+	-barlevel-background-color: rgba(190,190,190,0.4);
+	-barlevel-border-color: transparent;
+	-barlevel-active-background-color: white;
+	-barlevel-active-border-color: transparent;
+	-barlevel-overdrive-color: #FF5252;
+	-barlevel-overdrive-border-color: transparent;
+	-barlevel-overdrive-separator-width: 0.3em;
 	-barlevel-border-width: 0; }
 
 /*NOTE - all system-menu icons, to theme the volume slider icon*/
@@ -276,16 +276,11 @@ StScrollBar StButton#vhandle:active {
 .toggle-switch {
     width: 65px;
     height: 22px;
-}
-
-.toggle-switch-us,
-.toggle-switch-intl{
     background-image: url("assets/toggle-off.svg");
     background-size: contain;
 }
 
-.toggle-switch-us:checked,
-.toggle-switch-intl:checked{
+.toggle-switch:checked{
     background-image: url("assets/toggle-on.svg");
     background-size: contain;
 }
@@ -840,7 +835,7 @@ StEntry {
     border: none;
     box-shadow: none;
     color: #fff;
-    
+
     /* NOTE: Using a radial gradient instead of text-shadow cause text-shadow doesn't work */
     background-gradient-start: rgba(0,0,0,0.6);
     background-gradient-end: transparent;
@@ -2138,7 +2133,7 @@ can I make just the innermost one do things, so it's not huge?*/
     border-radius: 0 0 52px 0;
     border: 2px solid #fff;
     /* TODO: Shorthand is not supported? */
-    /* border-width: 0 20px 20px 0; */ 
+    /* border-width: 0 20px 20px 0; */
     border-left-width: 0;
     border-top-width: 0;
 }
@@ -2582,7 +2577,7 @@ need to reset default to zero since middle ones curve now*/
 .keyboard-key.shift-key-uppercase {
     background-image: url("assets/key-shift-white.svg");
     background-color: rgba(255,255,255,0.2); }
-    
+
 .keyboard-key.shift-key-uppercase:latched {
     background-image: url("assets/key-shift-white-latched.svg");
     background-color: rgba(255,255,255,0.2); }
