@@ -948,6 +948,7 @@ StEntry {
     padding: 4px 12px;
     background-color: transparent /*rgba(0,0,0,0.3)*/;
     text-align: center;
+    border: none;
     -x-offset: 8px;
 
     /*TODO - can't see too well over windows...
@@ -1591,67 +1592,6 @@ find what's theming them and make sure they're all the same*/
 
 .calendar-other-month-day:hover {
     color: rgb(192,192,192); /*was #333*/
-}
-
-.events-table {
-    width: 320px;
-    spacing-columns: 6pt;
-    padding: 0 1.4em;
-}
-
-.events-table:ltr {
-    padding-right: 1.9em;
-}
-
-.events-table:rtl {
-    padding-left: 1.9em;
-}
-
-.events-day-header {
-    font-weight: bold;
-    color: #e6e6e6;
-    padding-left: 0.4em;
-    padding-top: 1.2em;
-}
-
-.events-day-header:first-child {
-    padding-top: 0;
-}
-
-.events-day-header:rtl {
-    padding-left: 0;
-    padding-right: 0.4em;
-}
-
-.events-day-dayname {
-    color: rgba(153, 153, 153, 1.0);
-    text-align: left;
-    min-width: 20px;
-    padding-left: 4px; /*NOTE - for lining them up - good afaik*/
-}
-
-.events-day-dayname:rtl {
-    text-align: right;
-    padding-right: 4px;
-}
-
-.events-day-time {
-    color: rgb(192,192,192);
-    text-align: right;
-}
-
-.events-day-time:rtl {
-    text-align: left;
-}
-
-.events-day-task {
-    color: rgb(153, 153, 153);
-    padding-left: 8pt;
-}
-
-.events-day-task:rtl {
-    padding-left: 0px;
-    padding-right: 8pt;
 }
 
 .world-clocks-header,
@@ -2886,6 +2826,17 @@ need to reset default to zero since middle ones curve now*/
 
 /*note - .message-x seems to theme the popup notifications?*/
 
+.message {
+    border: none;
+    /*TODO: not working...*/
+    transition-duration: 0;
+}
+
+.message:hover {
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
 .message-title {
 }
 
@@ -2899,9 +2850,13 @@ need to reset default to zero since middle ones curve now*/
 }
 
 .message-list-clear-button.button:hover, .message-list-clear-button.button:focus {
-    background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.2);
     background-gradient-end: rgba(255,255,255,0.2);
+}
+
+.message-list-clear-button.button:active {
+    background-gradient-start: rgba(255,255,255,0.1);
+    background-gradient-end: rgba(255,255,255,0.1);
 }
 
 /*?*/
