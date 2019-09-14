@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="76"
+  height="27"
+  version="1.1">
+
+  <defs>
+    <style>
+        .st1 {
+          fill: #ffffffcc;
+          stroke-linejoin: round;
+          stroke: #ffffffcc;
+          stroke-width: 1;
+        }
+    </style>
+  </defs>
+
+  <!--
+  <circle r="5" cx="38" cy="14" fill="#ffffffcc"/>
+  <path d="M 20 14 l 4 4 v -8 z" class="st1" />
+  <path d="M 10 14 l 4 4 v -8 z" class="st1" transform="scale(-1,1) translate(-66)"  />
+  -->
+
+  <!-- Big rounded line -->
+  <rect width="46" height="6" x="15" y="11" fill="#ffffffcc" rx="3" />
+
+  <!-- Bigger, further apart arrows
+  <path d="M 15 14 l 7 7 v -14 z" class="st1" />
+  <path d="M 5 14 l 7 7 v -14 z" class="st1" transform="scale(-1,1) translate(-66)"  />
+  -->
+
+</svg>
