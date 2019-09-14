@@ -1199,6 +1199,13 @@ StEntry {
     transition-duration: 100ms;
     color:white;
 }
+/* Drag and drop apps */
+.app-well-app:drop .overview-icon,
+.app-well-app.app-folder:drop .overview-icon,
+.show-apps:drop .overview-icon,
+.grid-search-result:drop .overview-icon {
+  background-color: rgba(0,0,0,0.8);
+}
 
 .app-display .app-well-app > .overview-icon {
     border-radius: 4px;
