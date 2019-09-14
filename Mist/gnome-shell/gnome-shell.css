@@ -2669,76 +2669,21 @@ need to reset default to zero since middle ones curve now*/
 .tile-preview-left/*.on-primary*/ {
     /* keep in sync with -panel-corner-radius */
     border-radius: 0px; /*was 6px 0 0 0*/
-
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(255,255,255,1);
-    background-gradient-end: rgba(255,255,255,0);
+    background-color: rgba(255,255,255,0.2);
 }
 
 /*right*/
 .tile-preview-right/*.on-primary*/ {
     /* keep in sync with -panel-corner-radius */
     border-radius: 0px; /*was 0 6px 0 0*/
-
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(255,255,255,0);
-    background-gradient-end: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,0.2);
 }
 
 /*maximize*/
 .tile-preview-left.tile-preview-right/*.on-primary*/ {
     /* keep in sync with -panel-corner-radius */
     border-radius: 0; /*was 6px 6px 0 0*/
-
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,1);
-    background-gradient-end: rgba(255,255,255,0);
-}
-
-/*added for 3.16*/
-
-/*legacy-tray */
-.legacy-tray {
-  background-color: rgba(0,0,0,0.8);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-bottom-width: 0px;
-}
-.legacy-tray:ltr {
-    border-radius: 0px 6px 0px 0px;
-    border-left-width: 0px;
-}
-.legacy-tray:rtl {
-    border-radius: 6px 0px 0px 0px;
-    border-right-width: 0px;
-}
-
-.legacy-tray-handle,
-.legacy-tray-icon {
-    padding: 6px;
-}
-.legacy-tray-handle StIcon,
-.legacy-tray-icon StIcon {
-    icon-size: 24px;
-}
-.legacy-tray-handle:hover,
-.legacy-tray-handle:focus,
-.legacy-tray-icon:hover,
-.legacy-tray-icon:focus {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.legacy-tray-icon-box {
-    spacing: 12px;
-}
-.legacy-tray-icon-box:ltr {
-    padding-left: 12px;
-}
-.legacy-tray-icon-box:rtl {
-    padding-right: 12px;
-}
-.legacy-tray-icon-box StButton {
-    width: 24px;
-    height: 24px;
+    background-color: rgba(255,255,255,0.2);
 }
 
 .notification-banner {
