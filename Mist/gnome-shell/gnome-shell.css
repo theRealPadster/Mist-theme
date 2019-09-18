@@ -1610,20 +1610,15 @@ find what's theming them and make sure they're all the same*/
 }
 
 .weather-button,
-.weather-button:focus { /*bacon*/
+.weather-button:focus,
+.world-clocks-button,
+.world-clocks-button:focus { /*bacon*/
     background-color: transparent;
     border-radius: 4px; /*just needs to be big enough for 50% rounding*/
     padding: 8px 16px;
     color: #d9d9d9;
 }
 
-.world-clocks-button,
-.world-clocks-button:focus {
-    background-color: transparent;
-    border-radius: 5em; /*just needs to be big enough for 50% rounding*/
-    padding: 8px 16px;
-    color: #d9d9d9;
-}
 /*TODO - for some reason the text isn't controlled by the above rule
 it's in a thing in another thing (2 layers deep)
 can I make just the innermost one do things, so it's not huge?*/
