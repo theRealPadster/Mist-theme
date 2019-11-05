@@ -63,7 +63,7 @@ StScrollView.hfade {
 }
 
 StScrollBar {
-    padding: 0px;
+    padding: 0;
 }
 
 StScrollView StScrollBar {
@@ -133,8 +133,8 @@ StScrollBar StButton#vhandle:active {
     -slider-border-color: transparent;
     -slider-active-background-color: white;
     -slider-active-border-color: transparent;
-    -slider-border-width: 0px;
-    -slider-handle-radius: 0px;
+    -slider-border-width: 0;
+    -slider-handle-radius: 0;
 	-barlevel-height: 0.3em;
 	-barlevel-background-color: rgba(190,190,190,0.4);
 	-barlevel-border-color: transparent;
@@ -187,7 +187,7 @@ StScrollBar StButton#vhandle:active {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.1);
     background-gradient-end: rgba(255,255,255,0.1);
-    /*box-shadow: inset 0px 2px 4px rgba(0,0,0,0.9);*/
+    /*box-shadow: inset 0 2px 4px rgba(0,0,0,0.9);*/
     box-shadow: none;
 }
 
@@ -204,12 +204,12 @@ StScrollBar StButton#vhandle:active {
 }
 
 .popup-sub-menu StScrollBar StBin#trough {
-    border-width: 0px;
+    border-width: 0;
 }
 
 .popup-sub-menu StScrollBar StBin#vhandle {
     background-color: #4c4c4c;
-    border-width: 0px;
+    border-width: 0;
 }
 
 /* The remaining popup-menu sizing is all done in ems, so that if you
@@ -441,13 +441,13 @@ StScrollBar StButton#vhandle:active {
 /* remove squared inside edges of app view controls
 .app-view-control:first-child:ltr,
 .app-view-control:last-child:rtl {
-    border-radius: 18px 0px 0px 18px;
-    border-right-width: 0px;
+    border-radius: 18px 0 0 18px;
+    border-right-width: 0;
 }
 
 .app-view-control:last-child:ltr,
 .app-view-control:first-child:rtl {
-    border-radius: 0px 18px 18px 0px;
+    border-radius: 0 18px 18px 0;
 }
 */
 
@@ -471,13 +471,13 @@ StScrollBar StButton#vhandle:active {
     background-gradient-direction: vertical;
     transition-duration: 300ms;
 
-    box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
 
 /*NOTE - styling StEntry for chat notifications*/
 StEntry {
-    box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     border: none;
     background-gradient-start: rgba(0,0,0,0);
@@ -558,7 +558,7 @@ StEntry {
 .login-dialog StEntry:insensitive,
 .modal-dialog StEntry:insensitive {
     color: #666;
-    box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
 }
 
 /* Panel */
@@ -595,16 +595,16 @@ StEntry {
 }
 
 .panel-corner {
-    -panel-corner-radius: 0px;
+    -panel-corner-radius: 0;
     -panel-corner-background-color: transparent;
-    -panel-corner-border-width: 1px;
+    -panel-corner-border-width: 0;
     -panel-corner-border-color: transparent;
 }
 
 .panel-corner:active,
 .panel-corner:overview,
 .panel-corner:focus { /*activities*/
-    -panel-corner-border-color: rgba(255,255,255,0);
+    -panel-corner-border-color: transparent;
 }
 
 .panel-corner.lock-screen,
@@ -623,7 +623,7 @@ StEntry {
 .label-shadow {
     color: rgba(0,0,0,0.3);
 
-    /*text-shadow: black 0px 1px 4px;*/
+    /*text-shadow: black 0 1px 4px;*/
     /*NOTE - sometimes shows extra shadow, sometimes just this*/
 }
 
@@ -647,7 +647,7 @@ StEntry {
 #panel .panel-button:overview,
 #panel .panel-button:focus,
 #panel .panel-button:checked {
-    /*box-shadow: inset 0 -2px 0px #256ab1;*/
+    /*box-shadow: inset 0 -2px 0 #256ab1;*/
     /*remove blue underlines and slight dark tint on panel clicked buttons*/
     box-shadow: none;
     background-color: transparent;
@@ -692,7 +692,7 @@ StEntry {
 
 .panel-button:hover {
     color: white;
-    /*text-shadow: black 0px 2px 2px;*/
+    /*text-shadow: black 0 2px 2px;*/
 }
 
 .panel-button:active,
@@ -710,7 +710,7 @@ StEntry {
     background-image: none;
     border-image: none;
     color: white;
-    text-shadow: black 0px 1px 4px;
+    text-shadow: black 0 1px 4px;
 }
 
 .panel-status-button:active,
@@ -792,8 +792,8 @@ StEntry {
     spacing: 11px;
     visible-width: 32px; /* Amount visible before hovering */
     border: 1px solid transparent; /*rgba(128, 128, 128, 0.4)*/
-    border-right: 0px;
-    border-radius: 9px 0px 0px 9px;
+    border-right: 0;
+    border-radius: 9px 0 0 9px;
     background-color: transparent; /*rgba(0, 0, 0, 0.5)*/
     padding: 11px 7px 11px 11px;
 }
@@ -802,8 +802,8 @@ StEntry {
     spacing: 11px;
     visible-width: 32px; /* Amount visible before hovering */
     border-right: 1px;
-    border-left: 0px;
-    border-radius: 0px 9px 9px 0px;
+    border-left: 0;
+    border-radius: 0 9px 9px 0;
     padding: 11px 11px 11px 7px;
 }
 
@@ -825,7 +825,7 @@ StEntry {
     border-radius: 8px;
     padding: 4px 12px;
     -shell-caption-spacing: 12px;
-    text-shadow: black 0px 1px 2px;
+    text-shadow: black 0 1px 2px;
 }
 
 .window-caption:hover {
@@ -909,7 +909,7 @@ StEntry {
 
 .messages-indicator-contents:hover {
     color: white;
-    text-shadow: black 0px 1px 2px;
+    text-shadow: black 0 1px 2px;
 }
 
 .messages-indicator-highlight {
@@ -925,17 +925,17 @@ StEntry {
 #dash {
     color: white /*#5f5f5f*/;
     font-size: 9pt;
-    padding: 4px 0px;
+    padding: 4px 0;
     background-color: transparent /*rgba(0, 0, 0, 0.5)*/;
     border: 1px solid transparent /*rgba(128, 128, 128, 0.4)*/;
-    border-left: 0px;
-    border-radius: 0px 9px 9px 0px;
+    border-left: 0;
+    border-radius: 0 9px 9px 0;
 }
 
 #dash:rtl {
     border-left: 1px;
-    border-right: 0px;
-    border-radius: 9px 0px 0px 9px;
+    border-right: 0;
+    border-radius: 9px 0 0 9px;
 }
 
 
@@ -961,7 +961,7 @@ StEntry {
     /*TODO - can't see too well over windows...
     ...use modal-diag style?*/
 
-    text-shadow: black 0px 1px 2px;
+    text-shadow: black 0 1px 2px;
 
     /*border-radius: 8px;
     background-color: rgba(0,0,0,0.8);
@@ -976,7 +976,7 @@ StEntry {
 /* Search Results */
 
 #searchResults {
-    padding: 20px 10px 0px 10px;
+    padding: 20px 10px 0 10px;
     spacing: 18px;
 }
 
@@ -1055,7 +1055,7 @@ StEntry {
 .all-apps,
 .frequent-apps > StBoxLayout {
     /* horizontal padding to make sure scrollbars or dash don't overlap content */
-    padding: 0px 88px 10px 88px;
+    padding: 0 88px 10px 88px;
 }
 
 .page-indicator {
@@ -1156,7 +1156,7 @@ StEntry {
 /* NOTE - running app - this is removed and we only get a stupid dot now??
     it's so much harder to see...
 .app-well-app.running > .overview-icon {
-    text-shadow: black 0px 1px 2px;
+    text-shadow: black 0 1px 2px;
     background-gradient-start: transparent;
     background-gradient-end: rgba(255,255,255,0.1);
     background-gradient-direction: vertical;
@@ -1168,14 +1168,14 @@ StEntry {
     height: 0.4em;
     width: 1em;
     border-radius: 0.2em;
-    margin: 5px 0px 1px 0px;
+    margin: 5px 0 1px 0;
     /*TODO - tweak - from slider style
         was 0.3 em and 0.15em, etc.
 
     ...not working :/
     width: 48px;
     height: 48px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     background-color: transparent;
     background-image: url("thing.svg");
     */
@@ -1196,7 +1196,7 @@ StEntry {
 .list-search-result:hover,
 .grid-search-result:hover .overview-icon {
     background-color: rgba(255,255,255,0.1);
-    text-shadow: black 0px 1px 2px;
+    text-shadow: black 0 1px 2px;
     transition-duration: 100ms;
     color:white;
 }
@@ -1213,7 +1213,7 @@ StEntry {
 }
 
 .list-search-result:hover .list-search-result-description {
-    text-shadow: rgba(0,0,0,0.8) 0px 1px 2px;
+    text-shadow: rgba(0,0,0,0.8) 0 1px 2px;
 }
 
 .show-apps {
@@ -1239,7 +1239,7 @@ StEntry {
     - not sure where the theming is coming from, as this doesn't do it
     */
     border-radius: 4px;
-    box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 1);
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 1);
     background-color: rgba(255,255,255,0.05);
     transition-duration: 100ms;
 }
@@ -1274,7 +1274,7 @@ find what's theming them and make sure they're all the same*/
     background-gradient-start: transparent;
     background-gradient-end: rgba(255,255,255,0.3);
     background-gradient-direction: vertical;
-    text-shadow: black 0px 1px 2px;
+    text-shadow: black 0 1px 2px;
 }
 
 /*focus:hover app*/
@@ -1289,7 +1289,7 @@ find what's theming them and make sure they're all the same*/
 .list-search-result:selected:hover {
     background-gradient-start: rgba(255,255,255,0.3);
     background-gradient-end: rgba(255,255,255,0.3);
-    text-shadow: black 0px 1px 2px;
+    text-shadow: black 0 1px 2px;
     transition-duration: 100ms;
     color: white;
 }
@@ -1325,14 +1325,14 @@ find what's theming them and make sure they're all the same*/
 
 #LookingGlassDialog .notebook-tab:hover {
     color: white;
-    /*text-shadow: black 0px 2px 2px;*/
+    /*text-shadow: black 0 2px 2px;*/
 }
 
 #LookingGlassDialog .notebook-tab:selected {
     /*border-image: url("assets/panel-button-border.svg") 10 10 0 2;
     background-image: url("assets/panel-button-highlight-wide.svg");
     color: white;
-    text-shadow: black 0px 2px 2px;
+    text-shadow: black 0 2px 2px;
     NOTE - don't want this, seems to be hardcoded
 */
 
@@ -1422,7 +1422,7 @@ find what's theming them and make sure they're all the same*/
 /* Calendar popup */
 
 .calendar-vertical-separator {
-    -stipple-width: 0px;
+    -stipple-width: 0;
     -stipple-color: #505050;
     background-color: rgba(255,255,255,0.15);
     width: 1px;
@@ -1436,8 +1436,8 @@ find what's theming them and make sure they're all the same*/
     /* was .2em 1.75em .2em 1.75em,
     but this hack gets rid of the horizontal separator*/
     padding: .2em 1.75em .4em 1.75em;
-    spacing-rows: 0px;
-    spacing-columns: 0px;
+    spacing-rows: 0;
+    spacing-columns: 0;
 }
 
 .calendar-month-label {
@@ -1501,7 +1501,7 @@ find what's theming them and make sure they're all the same*/
 
 .datemenu-date-label:hover { /* doesn't seem to be used */
     background-color: rgba(255,255,255,0.1);
-    border-radius: 0px;
+    border-radius: 0;
     transition-duration: 100ms;
 }
 
@@ -1578,11 +1578,11 @@ find what's theming them and make sure they're all the same*/
 .calendar-today:active,
 .calendar-today:hover {
     /*background-image: url("assets/calendar-today.svg");
-    text-shadow: black 0px 1px 2px;
+    text-shadow: black 0 1px 2px;
     font-weight: bold;*/
 
     color: #fff;
-    text-shadow: #000 0px 2px 2px;
+    text-shadow: #000 0 2px 2px;
     font-weight: bold;
     background-color: rgba(255,255,255,0.4);
 }
@@ -1692,7 +1692,7 @@ can I make just the innermost one do things, so it's not huge?*/
 }
 
 .notification {
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0 0;
     border: 1px solid rgba(255,255,255,0.15); /* TODO !!! - notification popups double-border on opened chats?, removable, etc. (try setting to red or transparent*/
     background: rgba(0,0,0,0.8);
     padding: 8px 8px 4px 8px;
@@ -1869,7 +1869,7 @@ can I make just the innermost one do things, so it's not huge?*/
 }
 
 .chat-body {
-    spacing: 0px;
+    spacing: 0;
 }
 
 /*the StEntry in the text box for the notification (to reply)*/
@@ -1894,9 +1894,9 @@ can I make just the innermost one do things, so it's not huge?*/
 
     border: 1px solid rgba(255,255,255,0.3);
     border-left-width: 1px;
-    border-right-width: 0px;
-    border-top-width: 0px;
-    border-bottom-width: 0px;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
 
     /*NOTE - for some reason the borders don't show up without a gradient*/
     background-gradient-start: rgba(255,255,255,0);
@@ -1904,10 +1904,10 @@ can I make just the innermost one do things, so it's not huge?*/
     background-gradient-direction: horizontal;
 }
 .chat-received:rtl {
-    padding-left: 0px;
+    padding-left: 0;
     padding-right: 4px;
 
-    border-left-width: 0px;
+    border-left-width: 0;
     border-right-width: 1px;
 }
 
@@ -1920,13 +1920,13 @@ can I make just the innermost one do things, so it's not huge?*/
     */
 }
 .chat-sent:rtl {
-    padding-left: 0px;
+    padding-left: 0;
     padding-right: 18pt;
 }
 
 /*NOTE - e.g chat timestamps*/
 .chat-meta-message {
-    padding: 0px 4px;
+    padding: 0 4px;
     font-size: 9pt;
     color: #666;
 }
@@ -2038,7 +2038,7 @@ can I make just the innermost one do things, so it's not huge?*/
     padding: 8px;
     border-radius: 8px;
     /*background-color: rgba(0,0,0,0.4);
-    box-shadow: 0px 0px 4px rgba(0,0,0,1);*/
+    box-shadow: 0 0 4px rgba(0,0,0,1);*/
 }
 
 .switcher-list .item-box:outlined {
@@ -2105,31 +2105,31 @@ can I make just the innermost one do things, so it's not huge?*/
     background: rgba(0,0,0,0.8);
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 24px;
-    padding: 0px;
+    padding: 0;
 }
 
 .workspace-switcher {
     background: transparent;
-    border: 0px;
-    border-radius: 0px;
-    padding: 0px;
-    spacing: 0px;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    spacing: 0;
 }
 
 .ws-switcher-active-up {
     height: 100px;
-    border: 0px;
+    border: 0;
     background: rgba(255,255,255,0.1);
     background-image: url("assets/ws-switch-arrow-up.svg");
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .ws-switcher-active-down {
     height: 100px;
-    border: 0px;
+    border: 0;
     background: rgba(255,255,255,0.1);
     background-image: url("assets/ws-switch-arrow-down.svg");
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .ws-switcher-box {
@@ -2139,10 +2139,10 @@ can I make just the innermost one do things, so it's not huge?*/
 
 /*.ws-switcher-box:last-child*/
 .ws-switcher-active-down:last-child {
-    border-radius: 0px 0px 22px 22px; /*24px - 2px for the left and right borders*/
+    border-radius: 0 0 22px 22px; /*24px - 2px for the left and right borders*/
 }
 .ws-switcher-active-up:first-child {
-    border-radius: 22px 22px 0px 0px;
+    border-radius: 22px 22px 0 0;
 }
 
 /* Modal Dialogs */
@@ -2168,7 +2168,7 @@ can I make just the innermost one do things, so it's not huge?*/
 
     /*TODO - 3.18 - match radius to buttons*/
     border-radius: 18px;
-    padding: 0px;
+    padding: 0;
 }
 
 /*box that houses main content (not buttons, etc)*/
@@ -2198,15 +2198,15 @@ can I make just the innermost one do things, so it's not huge?*/
 /*TODO - 3.18 - radii for different button setups
 need to reset default to zero since middle ones curve now*/
 .modal-dialog-linked-button {
-  border-radius: 0px 0px 0px 0px; }
+  border-radius: 0 0 0 0; }
 .modal-dialog-linked-button:first-child {
-  border-radius: 0px 0px 0px 18px; }
+  border-radius: 0 0 0 18px; }
 .modal-dialog-linked-button:last-child {
-  border-right-width: 0px;
-  border-radius: 0px 0px 18px 0px; }
+  border-right-width: 0;
+  border-radius: 0 0 18px 0; }
 .modal-dialog-linked-button:first-child:last-child {
-  border-right-width: 0px;
-  border-radius: 0px 0px 18px 18px; }
+  border-right-width: 0;
+  border-radius: 0 0 18px 18px; }
 
 /* Run Dialog */
 
@@ -2250,7 +2250,7 @@ need to reset default to zero since middle ones curve now*/
 }
 
 .end-session-dialog-subject:rtl {
-    padding-left: 0px;
+    padding-left: 0;
     padding-right: 17px;
 }
 
@@ -2330,7 +2330,7 @@ need to reset default to zero since middle ones curve now*/
 
 .show-processes-dialog-subject:rtl,
 .mount-question-dialog-subject:rtl {
-    padding-left: 0px;
+    padding-left: 0;
     padding-right: 17px;
 }
 
@@ -2440,7 +2440,7 @@ need to reset default to zero since middle ones curve now*/
 }
 
 .polkit-dialog-user-layout:rtl {
-    padding-left: 0px;
+    padding-left: 0;
     padding-right: 10px;
 }
 
@@ -2475,7 +2475,7 @@ need to reset default to zero since middle ones curve now*/
 }
 
 .magnifier-zoom-region.full-screen {
-    border-width: 0px;
+    border-width: 0;
 }
 
 /* On-screen Keyboard */
@@ -2601,11 +2601,11 @@ need to reset default to zero since middle ones curve now*/
 }
 
 .candidate-page-button-previous {
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0 0 4px;
 }
 
 .candidate-page-button-next {
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0 4px 4px 0;
 }
 
 .candidate-page-button-icon {
@@ -2637,7 +2637,7 @@ need to reset default to zero since middle ones curve now*/
 
 .background-menu {
     -boxpointer-gap: 4px;
-    /* -arrow-rise: 0px; */
+    /* -arrow-rise: 0; */
 }
 
 .search-entry {
@@ -2648,12 +2648,12 @@ need to reset default to zero since middle ones curve now*/
 #panel.unlock-screen .panel-button,
 .system-status-icon, /*TODO - not working anymore???*/
 .popup-menu-arrow { /*perma-shadow for readability*/
-    icon-shadow: black 0px 1px 4px;
-    text-shadow: black 0px 1px 4px;
+    icon-shadow: black 0 1px 4px;
+    text-shadow: black 0 1px 4px;
 }
 
 .popup-menu-arrow {
-    icon-shadow: rgba(0,0,0,0.6) 0px 0.5px 4px; /*TODO ish - for some reason shadow is darker than the rest, this seems okay*/
+    icon-shadow: rgba(0,0,0,0.6) 0 0.5px 4px; /*TODO ish - for some reason shadow is darker than the rest, this seems okay*/
 }
 
 /* Tile previews */
@@ -2664,14 +2664,14 @@ need to reset default to zero since middle ones curve now*/
 /*left*/
 .tile-preview-left/*.on-primary*/ {
     /* keep in sync with -panel-corner-radius */
-    border-radius: 0px; /*was 6px 0 0 0*/
+    border-radius: 0; /*was 6px 0 0 0*/
     background-color: rgba(255,255,255,0.2);
 }
 
 /*right*/
 .tile-preview-right/*.on-primary*/ {
     /* keep in sync with -panel-corner-radius */
-    border-radius: 0px; /*was 0 6px 0 0*/
+    border-radius: 0; /*was 0 6px 0 0*/
     background-color: rgba(255,255,255,0.2);
 }
 
@@ -2905,13 +2905,13 @@ TODO - won't crop images, but works for transparent with background colour*/
 
 /*panel button for currently-running app*/
 .panel-status-menu-box {
-    icon-shadow: 0px 1px 4px black;
-    text-shadow: 0px 1px 4px black;
+    icon-shadow: 0 1px 4px black;
+    text-shadow: 0 1px 4px black;
 }
 
 /*icon for currently-running app*/
 .panel-status-menu-box:first-child *:first-child  {
-    icon-shadow: 0px 1px 4px black;
+    icon-shadow: 0 1px 4px black;
 }
 
 .notification-button {
@@ -2927,8 +2927,8 @@ please contact me or send a pull request
     spacing: 11px;
     visible-width: 32px;
     border: 1px solid transparent;
-    border-left: 0px;
-    border-radius: 0px 9px 9px 0px;
+    border-left: 0;
+    border-radius: 0 9px 9px 0;
     background-color: transparent;
     padding: 11px 11px 11px 7px;
 }
@@ -2938,8 +2938,8 @@ please contact me or send a pull request
     spacing: 11px;
     visible-width: 32px;
     border-right: 1px;
-    border-left: 0px;
-    border-radius: 9px 0px 0px 9px;
+    border-left: 0;
+    border-radius: 9px 0 0 9px;
     padding: 11px 7px 11px 11px;
 }
 */
