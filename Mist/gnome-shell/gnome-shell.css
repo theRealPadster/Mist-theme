@@ -646,7 +646,11 @@ StEntry {
 #panel .panel-button:active,
 #panel .panel-button:overview,
 #panel .panel-button:focus,
-#panel .panel-button:checked {
+#panel .panel-button:checked,
+#panel .panel-button.clock-display:active .clock,
+#panel .panel-button.clock-display:overview .clock,
+#panel .panel-button.clock-display:focus .clock,
+#panel .panel-button.clock-display:checked .clock {
     /*box-shadow: inset 0 -2px 0 #256ab1;*/
     /*remove blue underlines and slight dark tint on panel clicked buttons*/
     box-shadow: none;
