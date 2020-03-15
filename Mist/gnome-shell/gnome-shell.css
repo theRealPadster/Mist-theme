@@ -1438,6 +1438,7 @@ find what's theming them and make sure they're all the same*/
     padding: .2em 1.75em .4em 1.75em;
     spacing-rows: 0;
     spacing-columns: 0;
+    background-color: transparent;
 }
 
 .calendar-month-label {
