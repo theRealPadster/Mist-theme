@@ -47,8 +47,13 @@ $popover_arrow_height: 12px;
     color: $fg_color;
   }
 
+  &:hover {
+    background-color: transparentize($selected_bg_color, 0.6);
+    color: $selected_fg_color;
+  }
+
   &:active {
-    background-color: $selected_bg_color;
+    background-color: transparentize($selected_bg_color, 0.7);
     color: $selected_fg_color;
   }
 
