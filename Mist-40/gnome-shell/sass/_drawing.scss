@@ -38,21 +38,29 @@
 //
 
   @if $t==normal {
-    background-color: $base_color;
-    border-color: $borders_color;
-
+    // background-color: $base_color;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: inset 0 -1px 0 0 rgba(#fff, 0.2);
   }
   @if $t==focus {
-    border-color: if($fc==$selected_bg_color,
-              $selected_borders_color,
-              darken($fc,35%));
-    box-shadow: inset 0 0 0 1px $fc;
+    color: #fff;
+    // border-color: if($fc==$selected_bg_color,
+    //           $selected_borders_color,
+    //           darken($fc,35%));
+    // box-shadow: inset 0 0 0 1px $fc;
+    // TODO: tweak
+    box-shadow: inset 0 -1px 0 0 rgba(#fff, 0.3);
   }
-  @if $t==hover { }
+  @if $t==hover {
+    color: #fff;
+  }
   @if $t==insensitive {
     color: $insensitive_fg_color;
-    border-color: $insensitive_bg_color;
-    box-shadow: none;
+    // border-color: $insensitive_bg_color;
+    // TODO: does this even work if the colour has alpha?
+    box-shadow: inset 0 -1px 0 0 rgba($insensitive_bg_color, 0.3);
+    // box-shadow: none;
   }
 }
 
@@ -111,7 +119,7 @@
   }
 }
 
-@mixin button($t, $c:$bg_color, $tc:$fg_color, $edge: $borders_edge, $shadow: $shadow_color) {
+@mixin button($t, $c:transparent, $tc:$fg_color, $edge: $borders_edge, $shadow: $shadow_color) {
 //
 // Button drawing function
 //
@@ -150,15 +158,23 @@
     color: $tc;
     text-shadow: 0 1px $text_shadow_color;
     icon-shadow: 0 1px $text_shadow_color;
-    box-shadow: inset 0 0 0 2px transparentize($selected_bg_color, 0.4);
+
+    // TODO: it seems to not apply the background from
+    // :hover on top of :focus in the shutdown modal...
+    // I fixed it by adding !important twice, but this is not ideal...
+
+    background-color: rgba(#fff, 0.15);
+    // box-shadow: inset 0 0 0 2px transparentize($selected_bg_color, 0.4);
+    // text-decoration: underline;
+    width: auto;
     //border-color: $selected_bg_color;
   }
 
   // hover button
   @else if $t==hover {
     color: $tc;
-    background-color: lighten($c, if($variant == 'light', 8%, 5%));
-    border-color: if($variant == 'light', draw_border_color(lighten($c, 7%)), draw_border_color($c));
+    background-color: rgba(#fff, 0.2);
+    border-color: transparent;
     @include draw_shadows($button_shadow);
     text-shadow: 0 1px $text_shadow_color;
     icon-shadow: 0 1px $text_shadow_color;
@@ -167,7 +183,7 @@
   // active button
   @else if $t==active {
     color: $tc;
-    background-color: darken($c,3%);
+    background-color: rgba(#fff, 0.1);
     border-color: draw_border_color(if($variant == 'light', $c, darken($c,7%)));
     text-shadow: none;
     icon-shadow: none;
@@ -176,6 +192,7 @@
 
   // insensitive button
   @else if $t==insensitive {
+    // TODO
     color: $insensitive_fg_color;
     border-color: $insensitive_borders_color;
     background-color: $insensitive_bg_color;

@@ -32,7 +32,6 @@ $base_spacing: 6px;
 
 // border radii
 $base_border_radius: 8px;
-
 $modal_radius:$base_border_radius * 2;
 
 // non-standard colors
@@ -106,7 +105,8 @@ stage {
 
 // button styling
 %button {
-  border-radius: $base_border_radius;
+  // border-radius: $base_border_radius;
+  border-radius: 50px; // TODO: it ignores percents?
   border-style: solid;
   border-width: 1px;
   min-height: 22px;
@@ -159,18 +159,30 @@ stage {
   @if $flat {
     @include button(undecorated);
   } @else {
-    @include button(normal);
+    // TODO: add styles here. it uses the button style, which is not cool w me
+    // @include button(normal);
+    // background-color: red;
+    background-color: transparentize($bg_color, 0.2);
+    // background-color: rgba($bg_color, 10%);
+    color: $fg_color;
+    // background-color: $bg_color;
+
+     /* TODO !!! - notification popups double-border on opened chats?, removable, etc. (try setting to red or transparent*/
+    border: 1px solid rgba(255,255,255,0.15);
   }
 
   &:focus {
-    @include button(focus);
+    // @include button(focus);
+    background-color: $bg_color;
   }
 
   &:hover {
-    @include button(hover);
+    // @include button(hover);
+    background-color: $bg_color;
   }
 
   &:active {
-    @include button(active);
+    // @include button(active);
+    background-color: transparentize($bg_color, 0.15);
   }
 }
