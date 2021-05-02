@@ -12,8 +12,25 @@ $notification_banner_width: 34em;
     spacing: 0;
   }
 
+  // e.g. when calendar notifications pop up
   .notification-button {
     @extend %bubble_button;
+
+    // radius is 1 pixel less to fit in bubble
+    // since the notifications have a smaller radius than the modal buttons
+    // $base_border_radius + 1px (from _common.scss)
+    &:first-child {
+      border-radius: 0 0 0 9px;
+    }
+
+    &:last-child {
+      border-right-width: 0;
+      border-radius: 0 0 9px 0;
+    }
+
+    &:first-child:last-child {
+      border-radius: 0 0 9px 9px;
+    }
   }
 }
 
