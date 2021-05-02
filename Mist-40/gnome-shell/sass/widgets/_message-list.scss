@@ -7,6 +7,29 @@
   padding: 0 $base_padding * 2;
 
   .message-list-placeholder { spacing: 12px; }
+
+  // notifications inside the notification list
+  // (as opposed to when they pop up)
+  .message {
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      background-color: transparentize($selected_bg_color, 0.65);
+      // color: $selected_fg_color;
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-color: transparentize($selected_bg_color, 0.6);
+      // color: $selected_fg_color;
+    }
+
+    &:active {
+      background-color: transparentize($selected_bg_color, 0.7);
+      // color: $selected_fg_color;
+    }
+  }
 }
 
 .message-list-sections {
@@ -30,6 +53,7 @@
 // message bubbles
 .message {
   @include notification_bubble;
+
 
   // icon container
   .message-icon-bin {
