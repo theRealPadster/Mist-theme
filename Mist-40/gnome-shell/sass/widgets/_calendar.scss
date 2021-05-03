@@ -35,7 +35,7 @@
   @include notification_bubble($flat: true);
   color: desaturate(darken($fg_color,40%), 10%);
   font-weight: bold;
-  padding: .4em;
+  padding: 0.4em;
 }
 
 /* today button (the date) */
@@ -59,13 +59,18 @@
 /* Calendar */
 .calendar {
   @include notification_bubble;
+  border: none;
+  background-color: transparent;
   padding: $base_padding;
 
   // month
+  // the left/right arrow buttons have their height affected by the height here,
+  // so I need to make them wider to keep the circle shape
+  $month-label-vpad: 4px;
   .calendar-month-label {
     color: lighten($fg_color,5%);
     font-weight: bold;
-    padding: 8px 0;
+    padding: $month-label-vpad 0;
     &:focus {}
   }
 
@@ -75,13 +80,17 @@
     icon-size: $base_icon_size;
   }
 
+  // left/right arrows
   .pager-button {
     background-color: transparent;
-    height: 32px;
-    width: 32px;
+    padding: 0;
+    height: 32px + $month-label-vpad;
+    width: 32px + $month-label-vpad;
     border-radius: $base_border_radius;
-    &:hover, &:focus { background-color: lighten($hover_bg_color, 5%); }
-    &:active { background-color: $active_bg_color; }
+    border-radius: 50px;
+    @include flat_button;
+    // &:hover, &:focus { background-color: lighten($hover_bg_color, 5%); }
+    // &:active { background-color: $active_bg_color; }
   }
 
 
@@ -95,13 +104,17 @@
     padding: 0;
     margin: 2px;
     border-radius: $calendar_day_size * 0.5 + 2px;
-    border: 1px solid transparent; //avoid jumparound due to today
+    border: none;
     font-feature-settings: "tnum";
-    &:hover, &:focus { background-color: $hover_bg_color; }
-    &:active,&:selected {
-      color: lighten($fg_color,10%);
-      background-color: darken($bg_color,5%);
-    }
+    @include flat_button;
+    // &:hover, &:focus { background-color: $hover_bg_color;
+    //   // color: red;
+    //   // background-color: blue;
+    // }
+    // &:active,&:selected {
+    //   color: lighten($fg_color,10%);
+    //   background-color: darken($bg_color,5%);
+    // }
 
     // day of week heading
     &.calendar-day-heading {
@@ -132,22 +145,29 @@
   // Today
   .calendar-today {
     font-weight: bold;
-    border: 1px solid transparent;
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
+    border: none;
+    background-color: transparentize($selected_bg_color, 0.2);
+    // color: $selected_fg_color;
+    color: $bg_color;
 
     &:hover,&:focus {
-      background-color:lighten($selected_bg_color, 3%);
-      color: $selected_fg_color;
+      // background-color:lighten($selected_bg_color, 3%);
+      // color: $selected_fg_color;
+      background-color: $selected_bg_color;
+      color: $bg_color;
     }
 
     &:active,&:selected {
       background-color: $selected_bg_color;
-      color: $selected_fg_color;
+      background-color: transparentize($selected_bg_color, 0.2);
+      // color: $selected_fg_color;
+      color: $bg_color;
 
       &:hover,&:focus {
-        background-color:lighten($selected_bg_color, 3%);
-        color: $selected_fg_color;
+        // background-color:lighten($selected_bg_color, 3%);
+        // color: $selected_fg_color;
+        background-color: $selected_bg_color;
+        color: $bg_color;
       }
     }
   }
@@ -181,6 +201,8 @@
   @include notification_bubble;
   padding: $base_padding * 2;
 
+  // TODO: add some events and test this...
+
   .events-box {
     spacing: $base_spacing;
   }
@@ -206,6 +228,15 @@
 .world-clocks-button {
   @include notification_bubble;
   padding: $base_padding * 2;
+  // Add my custom flat button styles
+  @include flat_button;
+
+  // Make text more visible on hover/focus
+  &:hover, &:focus {
+    .world-clocks-header {
+      color: $fg_color;
+    }
+  }
 
   .world-clocks-grid {
     spacing-rows: $base_spacing;
@@ -248,6 +279,15 @@
 .weather-button {
   @include notification_bubble;
   padding: $base_padding * 2;
+  // Add my custom flat button styles
+  @include flat_button;
+
+  // Make text more visible on hover/focus
+  &:hover, &:focus {
+    .weather-header, .weather-forecast-time {
+      color: $fg_color;
+    }
+  }
 
   .weather-box {
     spacing: $base_spacing + $base_margin;

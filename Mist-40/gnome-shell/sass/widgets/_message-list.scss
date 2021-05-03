@@ -11,24 +11,8 @@
   // notifications inside the notification list
   // (as opposed to when they pop up)
   .message {
-    background-color: transparent;
-    border: none;
-
-    &:focus {
-      background-color: transparentize($selected_bg_color, 0.65);
-      // color: $selected_fg_color;
-      box-shadow: none;
-    }
-
-    &:hover {
-      background-color: transparentize($selected_bg_color, 0.6);
-      // color: $selected_fg_color;
-    }
-
-    &:active {
-      background-color: transparentize($selected_bg_color, 0.7);
-      // color: $selected_fg_color;
-    }
+    // Add my custom flat button styles
+    @include flat_button;
   }
 }
 
