@@ -188,7 +188,7 @@ stage {
 }
 
 // TODO: just update or refactor _drawing/button?
-@mixin flat_button() {
+@mixin flat_button($highlightHoverText: false) {
   background-color: transparent;
   border: none;
 
@@ -200,6 +200,9 @@ stage {
 
   &:hover {
     background-color: transparentize($selected_bg_color, 0.6);
+    @if $highlightHoverText {
+      color: $selected_fg_color;
+    }
     // color: $selected_fg_color;
   }
 

@@ -119,19 +119,22 @@
 /* Media Controls */
 .message-media-control {
   padding: $base_padding * 2 1.64em; // $base_padding * 4 = 24px
-  color: darken($fg_color, 15%);
+
+  @include flat_button($highlightHoverText: true);
+  // color: darken($fg_color, 15%);
 
   // uses $hover_bg_color since the media controls are in a notification_bubble
-  &:hover {
-    background-color: lighten($hover_bg_color, 5%);
-    color: $fg_color;
-  }
+  // &:hover {
+  //   background-color: lighten($hover_bg_color, 5%);
+  //   color: $fg_color;
+  // }
 
-  &:active {
-    background-color: darken($hover_bg_color, 2%);
-    color: $fg_color;
-  }
+  // &:active {
+  //   background-color: darken($hover_bg_color, 2%);
+  //   color: $fg_color;
+  // }
 
+  // TODO: test and style insensitive media controls
   &:insensitive { color: darken($fg_color,40%); }
 
   // fix border-radius for last button
