@@ -222,13 +222,15 @@
   &:hover,
   &:selected {
     .overview-icon {
-      background-color: transparentize($color, .9);
+      // background-color: transparentize($color, .9);
+      background-color: transparentize($color, 0.85);
     }
   }
 
   &:focus {
     .overview-icon {
-      background-color: transparentize($color, .7);
+      // background-color: transparentize($color, .7);
+      background-color: transparentize($color, 0.9);
       // border-color: $selected_bg_color;
     }
   }
@@ -243,7 +245,8 @@
   &:active,
   &:checked {
     .overview-icon {
-      background-color: transparentize(darken($osd_bg_color, 10%), .5);
+      // background-color: transparentize(darken($osd_bg_color, 10%), .5);
+      background-color: transparentize($color, 0.95);
     }
   }
 }

@@ -41,7 +41,7 @@ $app_grid_fg_color: #fff;
 // expanded folder
 .app-folder-dialog { //style like the dash
   border-radius: $modal_radius * 1.5;
-  background-color: $dash_background_color;
+  background-color: $bg_color;
   padding: 12px 0px 12px 0px;
 
   & .folder-name-container {
@@ -82,6 +82,18 @@ $app_grid_fg_color: #fff;
 
   & .page-indicators {
     margin-bottom: 18px;
+  }
+
+  .page-navigation-hint {
+    &.next:ltr,
+    &.previous:rtl {
+      background-gradient-start: rgba(255, 255, 255, 0.15);
+    }
+
+    &.previous:ltr,
+    &.next:rtl {
+      background-gradient-end: rgba(255, 255, 255, 0.15);
+    }
   }
 }
 .app-folder-dialog-container {
@@ -146,7 +158,7 @@ $app_grid_fg_color: #fff;
 
   &.next:ltr,
   &.previous:rtl {
-    background-gradient-start: rgba(255, 255, 255, 0.05);
+    background-gradient-start: rgba(255, 255, 255, 0.1);
     background-gradient-end: transparent;
     background-gradient-direction: horizontal;
     border-radius: 15px 0px 0px 15px;
@@ -155,7 +167,7 @@ $app_grid_fg_color: #fff;
   &.previous:ltr,
   &.next:rtl {
     background-gradient-start: transparent;
-    background-gradient-end: rgba(255, 255, 255, 0.05);
+    background-gradient-end: rgba(255, 255, 255, 0.1);
     background-gradient-direction: horizontal;
     border-radius: 0px 15px 15px 0px;
   }
