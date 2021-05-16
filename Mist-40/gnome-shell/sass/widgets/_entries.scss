@@ -9,7 +9,8 @@ StEntry {
   //&:hover { @include entry(hover);}
   &:focus { @include entry(focus);}
   &:insensitive { @include entry(insensitive);}
-  selection-background-color: $selected_bg_color;
+  selection-background-color: transparentize($selected_bg_color, 0.6);
+  // TODO: was gonna do a darker colour for text but it refuses to apply, even with !important
   selected-color: $selected_fg_color;
   StIcon.capslock-warning {
     icon-size: 16px;
